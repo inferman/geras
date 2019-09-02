@@ -23,8 +23,16 @@ html {
   font-weight: normal;
   letter-spacing: 0.2px;
   color: #545e6f;
+  box-sizing: border-box;
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -78,6 +86,9 @@ body {
     }
   }
 }
-.pow {
-  display: flex;
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

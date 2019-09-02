@@ -49,8 +49,7 @@ export default {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "./src/index.pug"),
-      favicon: "assets/img/favicon.png"
+      template: path.join(__dirname, "./src/layouts/main.pug")
     }),
     new MiniCssExtractPlugin({
       filename: "bundle.css"
