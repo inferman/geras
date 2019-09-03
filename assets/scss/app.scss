@@ -2,4 +2,12 @@
 @import "./utils/flex-classes";
 @import "./utils/common";
 @import "./layouts/layout";
+
+//------- Partitials -------//
+
 @import "./partitials/selector/selector";
+@import "./partitials/card-box/card-box";
+
+//------- Pages -------//
+// Patients
+@import "./pages/patients/patients";

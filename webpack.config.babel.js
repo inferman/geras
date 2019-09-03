@@ -2,6 +2,7 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+
 export default {
   entry: path.join(__dirname, "src/index.js"),
   output: {

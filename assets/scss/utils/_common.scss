@@ -1,1 +1,30 @@
 .hide { display: none; }
+
+.t_uppercase { text-transform: uppercase; }
+
+button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.flex-item {
+  flex: 1 1 0%;
+  padding: {
+    right: 10px;
+    left: 10px;
+  }
+  .collapse & { padding: 0; }
+  &.item {
+    @for $i from 1 through 12 {
+      $num: ( $i/12 )*100%;
+      &--#{$i} {
+        flex: 0 0 #{$num};
+        max-width: #{$num};
+      }
+    }
+  }
+
+}

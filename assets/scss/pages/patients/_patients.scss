@@ -1,0 +1,41 @@
+h1 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.patient-info {
+  .input-holder {
+    label {
+      color: #6C757D;
+      display: block;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    input {
+      font-size: 14px;
+      padding: 8px 6px;
+      width: 100%;
+    }
+  }
+  .card_inputs-box {
+    margin-bottom: 38px;
+  }
+}
+
+.g_btn {
+  border-radius: 36px;
+  font-size: 12px;
+  vertical-align: middle;
+  height: 36px;
+  width: 133px;
+  &:not(:last-child) { margin-right: 14px; }
+  &--primary {
+    background: #71AA33;
+    color: white;
+  }
+  &--outlined {
+    color: #71AA33;
+    border: 1px solid;
+  }
+}

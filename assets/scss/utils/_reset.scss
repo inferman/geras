@@ -49,3 +49,25 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

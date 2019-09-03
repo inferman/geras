@@ -1,0 +1,36 @@
+.card-box {
+  background: #fff;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  padding: 20px 16px;
+}
+
+.box-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 16px;
+  .icon-holder {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #71AA33;
+    position: relative;
+    margin-right: 12px;
+  }
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.card_inputs-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  .input-holder {
+    margin-bottom: 10px;
+  }
+}
