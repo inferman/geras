@@ -5,10 +5,12 @@
   flex: 0 0 270px;
   background: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding-bottom: 100px;
 }
 
 .sidebar_nav-box {
   padding-left: 20px;
+  overflow-y: auto;
 }
 
 .sidebar_logo-box {
@@ -18,11 +20,13 @@
 }
 
 .nav-list {
+  color: #424242;
   > li {
     margin-bottom: 12px;
   }
   .inner-nav {
     padding-left: 54px;
+    > li:not(:last-child) { margin-bottom: 10px; }
   }
 }
 
@@ -43,8 +47,7 @@
     width: 5px;
   }
   &.active {
-    // background: rgba(#d8f4c0, 0.2);
-    background: #d8f4c0;
+    background: rgba(#d8f4c0, 0.2);
     color: #71aa33;
     &:after {
       background: #71aa33;
@@ -57,4 +60,18 @@
   top: 50%;
   transform: translateY(-50%);
   left: 24px;
+}
+
+.sidebar_actions-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sidiber_action-item {
+  flex: 0 0 180px;
+  max-width: 180px;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
