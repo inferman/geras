@@ -17,34 +17,52 @@ h1.page-title Edit patient
   .card_inputs-box
     .input-holder.flex-item.item--4
       label First Name
-      input(type="text" placeholder="Name")
+      input(type="text" placeholder="Type here...")
     .input-holder.flex-item.item--4
       label Last Name
-      input(type="text" placeholder="Name")
+      input(type="text" placeholder="Type here...")
     .input-holder.flex-item.item--4
       label Email
       input(type="email" placeholder="example@domain.tld")
+
     .input-holder.flex-item.item--3
-      label First Name
-      input(type="text" placeholder="Name")
+      label Gender
+      select
+        option Select gender
+        option Male
+        option Female
     .input-holder.flex-item.item--3
-      label First Name
-      input(type="text" placeholder="Name")
+      label Date of birth
+      input(type="text" placeholder="Type here...")
     .input-holder.flex-item.item--3
-      label First Name
-      input(type="text" placeholder="Name")
+      label Height
+      .input-wrapper
+        input(type="text" placeholder="Type here...")
+        span CM
     .input-holder.flex-item.item--3
-      label First Name
-      input(type="text" placeholder="Name")
+      label Weight
+      .input-wrapper
+        input(type="text" placeholder="Type here...")
+        span KGS
+
     .input-holder.flex-item.item--4
-      label First Name
-      input(type="text" placeholder="Name")
+      label Institution
+      input(type="text" placeholder="Type here...")
     .input-holder.flex-item.item--4
-      label First Name
-      input(type="text" placeholder="Name")
+      label Country
+      select
+        option Select country
+        option Sweden
+        option France
+        option Germany
+        option USA
     .input-holder.flex-item.item--4
-      label First Name
-      input(type="text" placeholder="Name")
+      label Language
+      select
+        option Select language
+        option En
+        option Fr
+        option Ge
   .btns-holder
     button(type="button").t_uppercase.g_btn.g_btn--primary save
     button(type="button").t_uppercase.g_btn.g_btn--outlined cancel
