@@ -26,7 +26,9 @@
   }
   .inner-nav {
     padding-left: 54px;
-    > li:not(:last-child) { margin-bottom: 10px; }
+    > li:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -52,6 +54,9 @@
     &:after {
       background: #71aa33;
     }
+  }
+  .nav_title {
+    font-weight: 600;
   }
 }
 

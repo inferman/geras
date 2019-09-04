@@ -1,6 +1,10 @@
-.hide { display: none; }
+.hide {
+  display: none;
+}
 
-.t_uppercase { text-transform: uppercase; }
+.t_uppercase {
+  text-transform: uppercase;
+}
 
 button {
   border: none;
@@ -8,6 +12,7 @@ button {
   outline: none;
   background: transparent;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .flex-item {
@@ -16,15 +21,16 @@ button {
     right: 10px;
     left: 10px;
   }
-  .collapse & { padding: 0; }
+  .collapse & {
+    padding: 0;
+  }
   &.item {
     @for $i from 1 through 12 {
-      $num: ( $i/12 )*100%;
+      $num: ($i/12) * 100%;
       &--#{$i} {
         flex: 0 0 #{$num};
         max-width: #{$num};
       }
     }
   }
-
 }
