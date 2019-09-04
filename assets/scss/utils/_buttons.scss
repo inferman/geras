@@ -1,0 +1,27 @@
+button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.g_btn {
+  border-radius: 36px;
+  font-size: 12px;
+  vertical-align: middle;
+  height: 36px;
+  width: 133px;
+  &:not(:last-child) {
+    margin-right: 14px;
+  }
+  &--primary {
+    background: #71aa33;
+    color: white;
+  }
+  &--outlined {
+    color: #71aa33;
+    border: 1px solid;
+  }
+}

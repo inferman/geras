@@ -1,10 +1,7 @@
-h1 {
-  font-size: 20px;
-  margin-bottom: 28px;
-}
-
 .patient-info {
+  margin-bottom: 30px;
   .input-holder {
+    letter-spacing: 0.6px;
     label {
       color: #6c757d;
       display: block;
@@ -22,21 +19,33 @@ h1 {
   }
 }
 
-.g_btn {
-  border-radius: 36px;
-  font-size: 12px;
-  vertical-align: middle;
-  height: 36px;
-  width: 133px;
-  &:not(:last-child) {
-    margin-right: 14px;
+.patient-history {
+  table {
+    border-collapse: collapse;
+    width: 100%;
   }
-  &--primary {
-    background: #71aa33;
-    color: white;
+  th {
+    color: #4a4a4a;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 4px 8px;
   }
-  &--outlined {
-    color: #71aa33;
-    border: 1px solid;
+  tr {
+    text-align: left;
+  }
+  tbody {
+    tr {
+      &:nth-child(2n - 1) {
+        background: rgba(196, 196, 196, 0.15);
+      }
+    }
+  }
+
+  td {
+    color: #424242;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1.25;
+    letter-spacing: normal;
   }
 }
