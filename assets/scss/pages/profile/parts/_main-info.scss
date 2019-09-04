@@ -1,0 +1,70 @@
+.profile_doctor {
+  padding: 28px 12px 40px;
+  .profile_card-body {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 30px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  p {
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+}
+
+.profile_doctor-main {
+  margin-bottom: 40px;
+}
+
+.profile_doctor-avatar {
+  background: #739ff4;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.profile_doctor-info_name {
+  color: #424242;
+  font-size: 14px;
+}
+.profile_doctor-info_age {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.profile_doctor-role {
+  margin-bottom: 30px;
+  padding: 0 20px;
+  letter-spacing: 0.6px;
+  dt {
+    color: #6c757d;
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+  dd {
+    color: #424242;
+    font-size: 14px;
+  }
+}
+
+.profile_doctor-email {
+  a {
+    color: #6c757d;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
+}
+
+.profile_card-footer {
+  dt {
+    color: #546e7a;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  dd {
+    color: #424242;
+    font-size: 14px;
+  }
+}

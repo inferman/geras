@@ -1,0 +1,36 @@
+.profile_meetings-chart-box {
+  color: #424242;
+  letter-spacing: normal;
+  .meeting-info_item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  .circle-figure {
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 16px;
+    width: 16px;
+    &--green {
+      background: #a1cf6f;
+    }
+    &--blue {
+      background: #739ff4;
+    }
+  }
+  .info-holder {
+    max-width: 60px;
+    .value {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .description {
+      > span {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+    }
+  }
+}

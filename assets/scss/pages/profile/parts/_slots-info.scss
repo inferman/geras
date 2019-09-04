@@ -1,0 +1,29 @@
+.profile_slots-info {
+  height: 100%;
+  .slot-item {
+    color: #4a4a4a;
+  }
+  .circle-figure {
+    background: #c4c4c4;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    height: 26px;
+    width: 26px;
+  }
+  .value {
+    font-size: 24px;
+    letter-spacing: normal;
+    margin-bottom: 8px;
+  }
+  .description {
+    > span {
+      display: block;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: normal;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

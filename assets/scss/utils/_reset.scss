@@ -46,3 +46,15 @@ h4 {
   font-size: inherit;
   font-weight: 600;
 }
+
+dl {
+  text-align: left;
+  margin: 0;
+  dd {
+    margin: 0;
+  }
+  &.dl--inline {
+    display: flex;
+    align-items: center;
+  }
+}
