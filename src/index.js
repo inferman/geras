@@ -1,2 +1,2 @@
 import "../assets/scss/app.scss";
-import "./pages/patients/edit-patient.pug";
+import "./pages/patients/patients.pug";

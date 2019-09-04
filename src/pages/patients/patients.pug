@@ -1,13 +1,3 @@
--
-  const editHistory = {
-    headers: ["change", "transcription", "date", "editor"],
-    body: [
-      ["Name", "Alexsandra", "12/07/2019", "Susanna Jacksson"],
-      ["Email", "alexsandra@gerassolution.com", "12/07/2019", "Susanna Jacksson"],
-      ["Date of birth", "12/01/89", "10/05/2019", "Elsa Ericsson"]
-    ]
-  }
-
 h1.page-title Edit patient
 .card-box.patient-info
   .box-title
@@ -67,17 +57,4 @@ h1.page-title Edit patient
     button(type="button").t_uppercase.g_btn.g_btn--primary save
     button(type="button").t_uppercase.g_btn.g_btn--outlined cancel
 
-.card-box.patient-history
-  .box-title
-    h3 Edit History
-  .card_table-box
-    table
-      thead
-        tr
-          each th in editHistory.headers
-            th #{th}
-      tbody
-        each tr in editHistory.body
-          tr
-            each td in tr
-              td #{td}
+include ./edit-history
