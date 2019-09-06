@@ -1,0 +1,40 @@
+.card-box.no-borders.shadow.profile_doctor.profile_doctor_edit
+  .profile_avatar-box
+    .avatar
+      include ./../../../../assets/img/icons/user-icon.svg
+  .profile_edit-form
+    form.flex.collapse
+      .input-holder.flex-item.item--12
+        label Name
+        input(type="text" placeholder="Type here...")      
+      .input-holder.flex-item.item--12
+        label Last Name
+        input(type="text" placeholder="Type here...")
+      .input-holder.flex-item--stretch
+        label Gender
+        select
+          option Select gender
+          option Male
+          option Female
+      .input-holder.flex-item--stretch
+        label Date of birth
+        input(type="text" placeholder="Type here...")
+      .input-holder.flex-item.item--12
+        label Email
+        input(type="email" placeholder="Type here...")
+      .input-holder.flex-item.item--12
+        label Role
+        select
+          option Doctor
+          option Nurse
+      .input-holder.flex-item.item--12
+        label Country
+        select
+          option Select country
+          option Sweden
+          option France
+          option Germany
+          option USA
+      .btn-holder.flex-item.item--12.flex.justify-end
+        button(type="submit").g_btn.g_btn--primary.t_uppercase save changes
+

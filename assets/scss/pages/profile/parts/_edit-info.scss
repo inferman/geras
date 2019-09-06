@@ -1,0 +1,37 @@
+.profile_doctor_edit {
+  .profile_avatar-box {
+    margin-bottom: 14px;
+  }
+  .avatar {
+    background: #739ff4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 24px;
+    width: 24px;
+  }
+  .profile_edit-form {
+    .flex-item--stretch + .flex-item--stretch {
+      margin-left: 12px;
+    }
+    input,
+    select {
+      height: 28px;
+      font-size: 14px;
+    }
+    select {
+      padding: 0;
+    }
+  }
+  form {
+    flex-wrap: wrap;
+  }
+  .input-holder {
+    margin-bottom: 12px;
+  }
+  .btn-holder {
+    margin-top: 40px;
+  }
+}
