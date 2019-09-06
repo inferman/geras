@@ -1,0 +1,33 @@
+.search-block_wrapper {
+  max-width: 520px;
+  margin-bottom: 10px;
+  .input-holder {
+    position: relative;
+  }
+  .icon-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-block_input {
+    border-radius: 34px 0 0 34px;
+    padding-left: 40px;
+  }
+  .g_btn {
+    border-radius: 0 34px 34px 0;
+    height: 34px;
+    width: 80px;
+  }
+}
+
+.search-block_results-counter {
+  color: #546e7a;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.6px;
+}

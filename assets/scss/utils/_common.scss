@@ -15,10 +15,13 @@
   }
 }
 .flex-item {
-  flex: 1 1 0%;
+  flex: 1 1 0px;
   padding: {
     right: 10px;
     left: 10px;
+  }
+  &--shrink {
+    flex: 0 0 auto;
   }
   .collapse & {
     padding: 0;
