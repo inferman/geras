@@ -1,4 +1,4 @@
-mixin drop-list(list, direction='left', showList)
-  ul(class=`selector_list-block ${showList || 'hide'} ${direction === 'left' ? 'left' : 'right'}`)
+mixin drop-list(list, leftDirection=true, showList)
+  ul(class=`selector_list-block ${showList || 'hide'} ${leftDirection ? 'left' : 'right'}`)
     each item in list
       li.ellipsis #{item}

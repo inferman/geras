@@ -1,8 +1,8 @@
-mixin selector(currentEl, list, direction="left", showList=false)
+mixin selector(currentEl, list, leftDirection=true, showList=false)
   .selector-box
     .selector_selected-block
       .part
         span #{list[currentEl]}
       .part
         include ./../../assets/img/icons/arrow-down.svg
-    +drop-list(list, direction, showList )
+    +drop-list(list, leftDirection, showList )

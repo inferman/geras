@@ -1,0 +1,25 @@
+- const gendersList = ["Male", "Female"];
+- const langList = ["En", "Fr", "Ge"];
+
+.search_filters-block
+  .filters-block_title Filters
+  .control-holder
+    label Age
+    .slider-range 40 -75 years
+    .slider-block
+  
+  .control-holder
+    label Latest test score
+    .slider-range 50 -59 points
+    .slider-block
+
+  .control-holder
+    label Gender
+    +selector(0, gendersList, true, false)
+
+  .control-holder
+    label Language
+    +selector(0, langList, true, false)
+  
+  .btn-holder.flex.justify-end
+    button(type="button").g_btn.g_btn--primary.t_uppercase search 
