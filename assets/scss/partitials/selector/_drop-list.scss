@@ -1,0 +1,27 @@
+.selector_list-block {
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  position: absolute;
+  top: calc(100% + 8px);
+  // left: 0;
+  width: auto;
+  max-height: 100px;
+  overflow-y: auto;
+  z-index: 5;
+  min-width: 100%;
+  &.left {
+    left: 0;
+  }
+  &.right {
+    right: 0;
+  }
+  > li {
+    font-size: 12px;
+    padding: 4px 12px;
+    &:hover {
+      background: rgba(#d8f4c0, 0.2);
+      cursor: pointer;
+    }
+  }
+}

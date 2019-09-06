@@ -1,9 +1,26 @@
+- const statusesList = ["All patients", "Completed Test", "Have recommendations", "Have next meeting"];
+- const downloadsList = ["Download PDF Report", "Download Excel Report"]; 
+
+
 h1.page-title Patients
 .search-box.flex-container.justify-between.align-start
   .flex-item
     include ./parts/search-block
   .flex-item.flex-item--shrink
     .flex-container
-      .flex-item.flex-item--shrink filter
-      .flex-item.flex-item--shrink filter
-      .flex-item.flex-item--shrink filter
+      .flex-item.flex-item--shrink.search_status-selector
+        +selector(0, statusesList, 'right', false)
+
+      .flex-item.flex-item--shrink.search_filters-box
+        button(type="button").search_btn.search_btn--filters
+          .icon-holder
+            include ./../../../assets/img/icons/filter-icon.svg
+          | Filters
+        //- +drop-list()
+
+      .flex-item.flex-item--shrink
+        .search_download-box
+          button(type="button").search_btn.search_btn--download
+            .icon-holder
+              include ./../../../assets/img/icons/download-arrow-down.svg
+          +drop-list(downloadsList, 'right', false)

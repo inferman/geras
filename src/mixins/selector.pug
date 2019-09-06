@@ -1,10 +1,8 @@
-mixin selector(currentEl, list)
+mixin selector(currentEl, list, direction="left", showList=false)
   .selector-box
     .selector_selected-block
       .part
         span #{list[currentEl]}
       .part
         include ./../../assets/img/icons/arrow-down.svg
-    ul.selector_list-block.hide
-      each item in list
-        li #{item}
+    +drop-list(list, direction, showList )

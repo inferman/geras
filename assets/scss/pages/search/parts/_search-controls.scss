@@ -1,0 +1,44 @@
+.search_status-selector {
+  .selector_selected-block {
+    height: 34px;
+    border-radius: 34px;
+  }
+}
+
+.search_filters-box,
+.search_download-box {
+  position: relative;
+}
+
+.search_btn {
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  color: #424242;
+  font-weight: normal;
+  height: 34px;
+  vertical-align: middle;
+  text-align: left;
+  &.active {
+    background: #71aa33;
+    color: #fff;
+  }
+
+  &--filters {
+    border-radius: 34px;
+    width: auto;
+    padding: {
+      left: 10px;
+      right: 10px;
+    }
+    .icon-holder {
+      display: inline-block;
+      margin-right: 6px;
+    }
+  }
+
+  &--download {
+    border-radius: 50%;
+    text-align: center;
+    width: 34px;
+  }
+}
