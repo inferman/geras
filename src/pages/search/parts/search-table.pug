@@ -1,0 +1,46 @@
+-
+  const tableData = {
+    "headers": [" ", " ", "last name", "name", "personal number", "age", "gender", "country", "sign up date", "status", "actions"],
+    "rows": [
+    {
+      "lastName": "Johnsson",
+      "name": "Sebastian",
+      "personalId": "123456-1234",
+      "age": "59",
+      "gender": "Male",
+      "country": "Sweden",
+      "signupDate": "12/07/2019",
+      "status": "Uncompleted",
+      "actions": "..."
+    },
+    {
+      "lastName": "Aleksandra",
+      "name": "Romaniak",
+      "personalId": "123456-1234",
+      "age": "59",
+      "gender": "Female",
+      "country": "Sweden",
+      "signupDate": "12/07/2019",
+      "status": "Uncompleted",
+      "actions": "..."
+    }
+  ]};
+
+- let i = 0;
+
+table.search_patients-table
+  thead
+    tr
+      each th in tableData.headers
+        th=th
+  tbody
+    while i < 10
+      - i++
+      each tr in tableData.rows
+        tr
+          td
+            input(type="checkbox")
+          td
+            include ./../../../../assets/img/icons/user-icon.svg
+          each td in tr
+            td=td

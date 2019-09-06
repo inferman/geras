@@ -2,3 +2,10 @@
 @import "./parts/search-controls";
 @import "./parts/search-filters";
 @import "./parts/search-table";
+
+.search-box {
+  margin-bottom: 20px;
+}
+.search_table-box {
+  max-width: 1000px;
+}
