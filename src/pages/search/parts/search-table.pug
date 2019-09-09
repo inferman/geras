@@ -39,7 +39,7 @@ table.search_patients-table
       each tr in tableData.rows
         tr
           td
-            input(type="checkbox")
+            +custom-checkbox()
           td
             include ./../../../../assets/img/icons/user-icon.svg
           each td in tr
