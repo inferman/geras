@@ -1,3 +1,5 @@
+- const linksList = ["profile", "patients", "search"];
+
 doctype html
 html
   head
@@ -19,5 +21,10 @@ html
       main.main-content-wrapper  
         .page-wrapper
           block content
+            h3 links to pages
+            ul
+              each link in linksList
+                li
+                  a(href=`/${link}.html`) #{link}
 
     script(src="assets/js/app.js")

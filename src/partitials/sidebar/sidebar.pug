@@ -9,7 +9,7 @@
     {
       "icon": "user-icon.svg",
       "navTitle": "Patients",
-      "link": "#",
+      "link": "/patients.html",
       "innerNav": [
         {
           "title": "All patients",
@@ -40,7 +40,7 @@
     {
       "icon": "account-icon.svg",
       "navTitle": "Accounts",
-      "link": "#",
+      "link": "/profile.html",
       "innerNav": [
         {
           "title": "All accounts",
@@ -64,7 +64,7 @@
 
 .sidebar-wrapper  
   .sidebar_logo-box.flex-item--shrink
-    a(href="#").logo_link
+    a(href="/").logo_link
       include ./../../../assets/img/icons/logo.svg
   
   .sidebar_nav-box.flex-item--stretch
@@ -74,7 +74,7 @@
           div(class=`nav-item ${item.navTitle === 'Patients' ? 'active' : ''}`)
             .nav_icon-holder 
               include ./../../../assets/img/icons/home-icon.svg
-            span.nav_title #{item.navTitle}
+            a(href=`${item.link}`).nav_title #{item.navTitle}
           if item.innerNav.length
             ul.inner-nav
               each subNav in item.innerNav              
