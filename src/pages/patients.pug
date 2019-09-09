@@ -1,0 +1,62 @@
+extends ./../layouts/main
+block content
+  h1.page-title Edit patient
+  .card-box.patient-info
+    .box-title
+      i.icon-holder
+        include ./../../assets/img/icons/user-icon.svg
+      h3 Basic information
+    .card_inputs-box
+      .input-holder.flex-item.item--4
+        label First Name
+        input(type="text" placeholder="Type here...")
+      .input-holder.flex-item.item--4
+        label Last Name
+        input(type="text" placeholder="Type here...")
+      .input-holder.flex-item.item--4
+        label Email
+        input(type="email" placeholder="example@domain.tld")
+
+      .input-holder.flex-item.item--3
+        label Gender
+        select
+          option Select gender
+          option Male
+          option Female
+      .input-holder.flex-item.item--3
+        label Date of birth
+        input(type="text" placeholder="Type here...")
+      .input-holder.flex-item.item--3
+        label Height
+        .input-wrapper
+          input(type="text" placeholder="Type here...")
+          span CM
+      .input-holder.flex-item.item--3
+        label Weight
+        .input-wrapper
+          input(type="text" placeholder="Type here...")
+          span KGS
+
+      .input-holder.flex-item.item--4
+        label Institution
+        input(type="text" placeholder="Type here...")
+      .input-holder.flex-item.item--4
+        label Country
+        select
+          option Select country
+          option Sweden
+          option France
+          option Germany
+          option USA
+      .input-holder.flex-item.item--4
+        label Language
+        select
+          option Select language
+          option En
+          option Fr
+          option Ge
+    .btns-holder
+      button(type="button").t_uppercase.g_btn.g_btn--primary save
+      button(type="button").t_uppercase.g_btn.g_btn--outlined cancel
+
+  include ./../partitials/patients/edit-history

@@ -16,11 +16,8 @@ html
     .wrapper
       block sidebar
         include ../partitials/sidebar/sidebar
-      main.main-content-wrapper        
-        block content
-          .page-wrapper
-            //- include ../pages/patients/patients
-            //- include ../pages/profile/profile
-            include ../pages/search/search
+      main.main-content-wrapper  
+        .page-wrapper
+          block content
 
     script(src="assets/js/app.js")
