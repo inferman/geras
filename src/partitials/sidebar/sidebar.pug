@@ -7,7 +7,7 @@
       "innerNav": []
     },
     {
-      "icon": "user-icon.svg",
+      "icon": "user-icon",
       "navTitle": "Patients",
       "link": "/patients.html",
       "innerNav": [
@@ -26,19 +26,19 @@
       ]
     },
     {
-      "icon": "calendar-icon.svg",
+      "icon": "calendar-icon",
       "navTitle": "Appointments",
       "link": "#",
       "innerNav": []
     },
     {
-      "icon": "phone-icon.svg",
+      "icon": "phone-icon",
       "navTitle": "Video call",
       "link": "#",
       "innerNav": []
     },
     {
-      "icon": "account-icon.svg",
+      "icon": "account-icon",
       "navTitle": "Accounts",
       "link": "/profile.html",
       "innerNav": [
@@ -65,15 +65,16 @@
 .sidebar-wrapper  
   .sidebar_logo-box.flex-item--shrink
     a(href="/").logo_link
-      include ./../../../assets/img/icons/logo.svg
+      +svgIcon('logo')
   
   .sidebar_nav-box.flex-item--stretch
     ul.nav-list      
       each item in navigationData
         li
           div(class=`nav-item ${item.navTitle === 'Patients' ? 'active' : ''}`)
-            .nav_icon-holder 
-              include ./../../../assets/img/icons/home-icon.svg
+            .nav_icon-holder
+              +svgIcon(item.icon, 'sidebar_nav-icon')
+              //- include ./../../../assets/img/icons/home-icon.svg
             a(href=`${item.link}`).nav_title #{item.navTitle}
           if item.innerNav.length
             ul.inner-nav

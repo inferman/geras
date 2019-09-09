@@ -3,8 +3,9 @@ block content
   h1.page-title Edit patient
   .card-box.patient-info
     .box-title
-      i.icon-holder
-        include ./../../assets/img/icons/user-icon.svg
+      i.icon-holder.patients-title_icon-holder
+        +svgIcon('user-icon')
+        //- include ./../../assets/img/icons/user-icon.svg
       h3 Basic information
     .card_inputs-box
       .input-holder.flex-item.item--4

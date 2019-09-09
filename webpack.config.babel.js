@@ -1,6 +1,7 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 import fs from "fs";
 
 function generateHtmlPlugins(templateDir) {
@@ -32,8 +33,12 @@ export default {
         use: ["babel-loader", "eslint-loader"]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         use: ["file-loader"]
+      },
+      {
+        test: /\.svg$/,
+        use: ["svg-sprite-loader", "svgo-loader"]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -64,6 +69,7 @@ export default {
     ]
   },
   plugins: [
+    new SpriteLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "./src/layouts/main.pug")
     }),

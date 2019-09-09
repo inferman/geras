@@ -1,7 +1,7 @@
 .search-block_wrapper.flex
   .input-holder.flex-item--stretch
     .icon-holder
-      include ./../../../assets/img/icons/search-icon.svg
+      +svgIcon('search-icon', 'search-block_search-icon')
     input(
       type="text"
       placeholder="Write patient’s name, personal number or email").search-block_input

@@ -17,7 +17,7 @@ block content
           .flex-item.flex-item--shrink.search_filters-box
             button(type="button").search_btn.search_btn--filters
               .icon-holder
-                include ./../../assets/img/icons/filter-icon.svg
+                +svgIcon('filter-icon', 'search_filter-icon')
               | Filters
             div.hide
               include ./../partitials/search/filters-block
@@ -26,7 +26,7 @@ block content
             .search_download-box
               button(type="button").search_btn.search_btn--download
                 .icon-holder
-                  include ./../../assets/img/icons/download-arrow-down.svg
+                  +svgIcon('download-arrow-down', 'search_download-icon')
               +drop-list(downloadsList, false, false)
 
   .search_table-box
