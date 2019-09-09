@@ -32,11 +32,31 @@
     }
     td {
       &:first-child {
-        padding: 0 12px 0 24px;
+        width: 54px;
       }
       &:nth-child(2) {
-        padding: 0 12px;
+        width: 30px;
       }
+    }
+    .status-holder {
+      border: 2px solid #546e7a;
+      border-radius: 2px;
+      font-size: 12px;
+      padding: {
+        top: 4px;
+        bottom: 4px;
+      }
+      max-width: 100px;
+      text-align: center;
+    }
+  }
+  .user-icon_block {
+    display: flex;
+    align-items: center;
+    > svg {
+      height: 16px;
+      width: 12px;
+      fill: #546e7a;
     }
   }
 }

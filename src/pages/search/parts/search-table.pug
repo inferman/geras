@@ -10,7 +10,7 @@
       "gender": "Male",
       "country": "Sweden",
       "signupDate": "12/07/2019",
-      "status": "Uncompleted",
+      "status": "Uncomplete",
       "actions": "..."
     },
     {
@@ -21,7 +21,7 @@
       "gender": "Female",
       "country": "Sweden",
       "signupDate": "12/07/2019",
-      "status": "Uncompleted",
+      "status": "Uncomplete",
       "actions": "..."
     }
   ]};
@@ -41,6 +41,11 @@ table.search_patients-table
           td
             +custom-checkbox()
           td
-            include ./../../../../assets/img/icons/user-icon.svg
+            .user-icon_block
+              include ./../../../../assets/img/icons/user-icon.svg
           each td in tr
-            td=td
+            if td === "Uncomplete"
+              td
+                .status-holder #{td}
+            else
+              td=td
