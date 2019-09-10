@@ -1,13 +1,13 @@
 @import "./utils/fonts";
 @import "./utils/reset";
 @import "./utils/flex-classes";
+@import "./utils/grid";
 @import "./utils/common";
 @import "./utils/buttons";
 @import "./utils/controls";
 @import "./layouts/layout";
 
 //------- Partitials -------//
-
 @import "./partitials/selector/selector";
 @import "./partitials/selector/drop-list";
 @import "./partitials/card-box/card-box";

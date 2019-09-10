@@ -6,37 +6,6 @@
   text-transform: uppercase;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  &:not(.collapse) {
-    margin: 0 -10px;
-  }
-}
-.flex-item {
-  flex: 1 1 0px;
-  padding: {
-    right: 10px;
-    left: 10px;
-  }
-  &--shrink {
-    flex: 0 0 auto;
-  }
-  .collapse & {
-    padding: 0;
-  }
-  &.item {
-    @for $i from 1 through 12 {
-      $num: ($i/12) * 100%;
-      &--#{$i} {
-        flex: 0 0 #{$num};
-        max-width: #{$num};
-      }
-    }
-  }
-}
-
 .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
