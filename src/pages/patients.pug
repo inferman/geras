@@ -1,8 +1,11 @@
 extends ./../layouts/main
-block content
+
+block pageTitle 
   .page-title
     +burger('sidebar_toggler-box hidden-xl-up')
     h1 Edit patient
+
+block content
   .card-box.patient-info
     .box-title
       i.icon-holder.patients-title_icon-holder

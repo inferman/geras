@@ -1,11 +1,14 @@
 extends ./../layouts/main
+
+block pageTitle 
+  .page-title
+    +burger('sidebar_toggler-box hidden-xl-up')
+    h1 Patients
+
 block content
   - const statusesList = ["All patients", "Completed Test", "Have recommendations", "Have next meeting"];
   - const downloadsList = ["Download PDF Report", "Download Excel Report"]; 
 
-  .page-title
-    +burger('sidebar_toggler-box hidden-xl-up')
-    h1 Patients
   .search-box
     .flex-container.justify-between.align-start
       .flex-item.item-sm-12.item-lg-7
