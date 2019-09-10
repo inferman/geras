@@ -3,13 +3,14 @@ block content
   - const statusesList = ["All patients", "Completed Test", "Have recommendations", "Have next meeting"];
   - const downloadsList = ["Download PDF Report", "Download Excel Report"]; 
 
-
-  h1.page-title Patients
+  .page-title
+    +burger('sidebar_toggler-box hidden-xl-up')
+    h1 Patients
   .search-box
     .flex-container.justify-between.align-start
-      .flex-item
+      .flex-item.item-sm-12.item-lg-7
         include ./../partitials/search/search-block
-      .flex-item.flex-item--shrink
+      .search_filters-row.flex-item.item-sm-12.item-lg-5
         .flex-container
           .flex-item.flex-item--shrink.search_status-selector
             +selector(0, statusesList, false, false)

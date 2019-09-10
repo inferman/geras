@@ -1,6 +1,9 @@
 extends ./../layouts/main
 block content
-  h1.page-title Doctor account
+  .page-title
+    +burger('sidebar_toggler-box hidden-xl-up')
+    
+    h1 Doctor account
   .flex-container
     .flex-item.item--3
       include ./../partitials/profile/main-info

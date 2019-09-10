@@ -44,7 +44,7 @@ $map-grid-props: (
 }
 
 .flex-item {
-  flex: 1 1 0px;
+  flex: 0 0 100%;
   max-width: 100%;
   padding: {
     right: 10px;
@@ -52,6 +52,9 @@ $map-grid-props: (
   }
   &--shrink {
     flex: 0 0 auto;
+  }
+  &--stretch {
+    flex: 1 1 0px;
   }
   .collapse & {
     padding: 0;

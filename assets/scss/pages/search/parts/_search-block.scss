@@ -1,6 +1,9 @@
 .search-block_wrapper {
-  max-width: 520px;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+  @media screen and (min-width: 1200px) {
+    max-width: 520px;
+    margin-bottom: 10px;
+  }
   .input-holder {
     position: relative;
   }

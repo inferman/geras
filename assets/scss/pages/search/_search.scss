@@ -7,5 +7,22 @@
   margin-bottom: 20px;
 }
 .search_table-box {
-  max-width: 1000px;
+  @media screen and (min-width: 1200px) {
+    max-width: 1000px;
+  }
+}
+
+.search_filters-row {
+  display: flex;
+  width: 100%;
+  > .flex-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 991px) {
+    justify-content: flex-end;
+    > .flex-container {
+      width: auto;
+    }
+  }
 }
