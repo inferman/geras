@@ -1,0 +1,16 @@
+.diagnostic_tabs-container {
+  padding: 20px 16px 0;
+  margin-bottom: 18px;
+  .top-level-tabs {
+    max-width: 640px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    .top-level-tabs {
+      margin-bottom: 18px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+  }
+}

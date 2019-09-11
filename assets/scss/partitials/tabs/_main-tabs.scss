@@ -1,0 +1,37 @@
+.main-tabs_list {
+  flex-wrap: nowrap;
+  > li {
+    flex: 1 1 0px;
+    text-align: center;
+    max-width: 110px;
+  }
+  @media screen and (min-width: 768px) {
+    > li {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.main-tab_tab {
+  border-radius: 10px;
+  color: #546e7a;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: normal;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+  .active > & {
+    background: #fff;
+    color: #71aa33;
+  }
+  @media screen and (min-width: 768px) {
+    border-radius: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,7 @@
+- const subtabsList = ["Overview", "Diet", "Social", "Physical", "Games"];
+
+.sub-tabs_box
+  ul.sub-tabs_list
+    each subTab in subtabsList
+      li(class=`${subTab === subtabsList[1] ? 'active' : ''}`)
+        .sub-tabs_tab #{subTab}

@@ -1,0 +1,35 @@
+.sub-tabs_list {
+  display: flex;
+  li {
+    padding: 0 16px;
+    &:not(.active) {
+      border-bottom: 1px solid #cbd6df;
+    }
+    &.active {
+      border: {
+        left: 1px solid #cbd6df;
+        right: 1px solid #cbd6df;
+      }
+    }
+    &:first-child {
+      border-left: none;
+    }
+  }
+}
+
+.sub-tabs_tab {
+  cursor: pointer;
+  font-size: 14px;
+  color: #4a4a4a;
+  letter-spacing: normal;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .active > & {
+    font-weight: 600;
+  }
+  @media screen and (min-width: 768px) {
+    height: 38px;
+  }
+}

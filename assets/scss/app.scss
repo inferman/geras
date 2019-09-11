@@ -11,6 +11,8 @@
 @import "./partitials/selector/selector";
 @import "./partitials/selector/drop-list";
 @import "./partitials/card-box/card-box";
+@import "./partitials/tabs/main-tabs";
+@import "./partitials/tabs/sub-tabs";
 
 //------- Pages -------//
 // Patients
@@ -21,3 +23,6 @@
 
 // Search
 @import "./pages/search/search";
+
+// Diagnostic
+@import "./pages/diagnostic/diagnostic";

@@ -1,0 +1,15 @@
+extends ./../layouts/main 
+
+block pageTitle
+  .page-title.hidden-xl-up
+    +burger('sidebar_toggler-box hidden-xl-up')
+    h1 Patients
+
+block tabs
+  .diagnostic_tabs-container
+    .top-level-tabs
+      include ./../partitials/tabs/main-tabs
+    .second-level-tabs
+      include ./../partitials/tabs/sub-tabs
+
+block content
