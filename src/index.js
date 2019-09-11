@@ -11,6 +11,7 @@ import "./../assets/img/icons/search-icon.svg";
 import "./../assets/img/icons/arrow-down.svg";
 import "./../assets/img/icons/download-arrow-down.svg";
 import "./../assets/img/icons/check-mark.svg";
+import "./../assets/img/icons/doctor-icon.svg";
 
 import "./../assets/js/sidebarToggle";
 import "./../assets/js/selector";

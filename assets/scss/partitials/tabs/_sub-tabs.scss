@@ -1,17 +1,17 @@
 .sub-tabs_list {
   display: flex;
-  border-bottom: 1px solid #cbd6df;
+  border-bottom: 1px solid $dark-grey;
   li {
     padding: 0 16px;
     &.active {
       border: {
-        left: 1px solid #cbd6df;
-        right: 1px solid #cbd6df;
+        left: 1px solid $dark-grey;
+        right: 1px solid $dark-grey;
       }
       position: relative;
       &:after {
         content: "";
-        background: #f4f6f9;
+        background: $bg-color_primary;
         position: absolute;
         top: 100%;
         left: 0;
@@ -28,7 +28,7 @@
 .sub-tabs_tab {
   cursor: pointer;
   font-size: 14px;
-  color: #4a4a4a;
+  color: $text-color_primary;
   letter-spacing: normal;
   height: 30px;
   display: flex;

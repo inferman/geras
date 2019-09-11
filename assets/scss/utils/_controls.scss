@@ -1,8 +1,8 @@
 input,
 textarea,
 select {
-  color: #424242;
-  border: 1px solid #e3e3e3;
+  color: $text-color_primary;
+  border: 1px solid $inputs-border-color;
   border-radius: 4px;
   font-size: 14px;
   padding: 8px 6px;
@@ -11,7 +11,7 @@ select {
     outline: none;
   }
   &::placeholder {
-    color: #b2b2b2;
+    color: $placeholder-color;
   }
 }
 
@@ -28,7 +28,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .input-holder {
   letter-spacing: 0.6px;
   label {
-    color: #6c757d;
+    color: $label-color;
     display: block;
     font-size: 12px;
     line-height: 16px;
@@ -42,7 +42,7 @@ input[type="number"]::-webkit-outer-spin-button {
     padding-right: 30px;
   }
   > span {
-    color: #828282;
+    color: $placeholder-color;
     font-size: 10px;
     position: absolute;
     right: 0;
@@ -72,7 +72,7 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 2;
 }
 .pseudo-checkbox_holder {
-  border: 1px solid #e3e3e3;
+  border: 1px solid $inputs-border-color;
   border-radius: 2px;
   position: absolute;
   left: 0;
@@ -81,13 +81,13 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 16px;
   z-index: 1;
   .hidden-checkbox:checked + & {
-    border-color: #71aa33;
-    background: #71aa33;
+    border-color: $primary-color;
+    background: $primary-color;
   }
 }
 
 .pseudo-checkbox_icon {
-  fill: #fff;
+  fill: $white;
   pointer-events: none;
   position: absolute;
   left: 50%;
@@ -126,7 +126,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .burger_item {
-  background: #000;
+  background: $black;
   border-radius: 3px;
   height: 4px;
   width: 100%;
@@ -137,7 +137,7 @@ input[type="number"]::-webkit-outer-spin-button {
     position: absolute;
     left: 0;
     border-radius: 3px;
-    background: #000;
+    background: $black;
     height: 4px;
     width: 100%;
   }

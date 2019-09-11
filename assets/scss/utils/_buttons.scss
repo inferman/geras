@@ -17,11 +17,11 @@ button {
     margin-right: 14px;
   }
   &--primary {
-    background: #71aa33;
-    color: white;
+    background: $primary-color;
+    color: $white;
   }
   &--outlined {
-    color: #71aa33;
+    color: $primary-color;
     border: 1px solid;
   }
 }

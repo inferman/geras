@@ -3,13 +3,13 @@
 }
 
 .selector_selected-block {
-  background: #fff;
-  border: 1px solid #c4c4c4;
+  background: $white;
+  border: 1px solid $ordinary-grey;
   padding: 4px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #4f4f4f;
+  color: $text-color_primary;
   font-size: 12px;
   height: 28px;
   border-radius: 28px;

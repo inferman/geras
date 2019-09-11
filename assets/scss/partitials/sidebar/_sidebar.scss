@@ -1,6 +1,8 @@
+$bg-active: $primary-color_light;
+
 .sidebar-wrapper {
-  background: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: $white;
+  box-shadow: 0px 4px 10px rgba($black, 0.25);
   position: absolute;
   transform: translateX(-100%);
   transition: transform 0.2s ease-in-out;
@@ -52,7 +54,7 @@
 }
 
 .nav-list {
-  color: #424242;
+  color: $text-color_primary;
   font-size: 14px;
   > li {
     margin-bottom: 12px;
@@ -82,13 +84,13 @@
     width: 5px;
   }
   &.active {
-    background: rgba(#d8f4c0, 0.2);
-    color: #71aa33;
+    background: rgba($bg-active, 0.2);
+    color: $primary-color;
     &:after {
-      background: #71aa33;
+      background: $primary-color;
     }
     .sidebar_nav-icon {
-      fill: #71aa33;
+      fill: $primary-color;
     }
   }
   .nav_title {
@@ -106,7 +108,7 @@
   left: 24px;
 }
 .sidebar_nav-icon {
-  fill: #4a4a4a;
+  fill: $text-color_primary;
   width: 14px;
   height: 12px;
 }

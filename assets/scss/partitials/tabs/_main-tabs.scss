@@ -15,7 +15,8 @@
 
 .main-tab_tab {
   border-radius: 10px;
-  color: #546e7a;
+  // color: #546e7a;
+  color: $text-color_additional;
   cursor: pointer;
   font-size: 10px;
   font-weight: 600;
@@ -26,8 +27,8 @@
   justify-content: center;
   height: 33px;
   .active > & {
-    background: #fff;
-    color: #71aa33;
+    background: $white;
+    color: $primary-color;
   }
   @media screen and (min-width: 768px) {
     border-radius: 38px;
