@@ -9,7 +9,10 @@ block tabs
   .diagnostic_tabs-container
     .top-level-tabs
       include ./../partitials/tabs/main-tabs
-    .second-level-tabs
-      include ./../partitials/tabs/sub-tabs
+    .flex-container.justify-between.align-center
+      .second-level-tabs.flex-item
+        include ./../partitials/tabs/sub-tabs
+      .selector-holder.flex-item
+        +selector(0, ["this month", "this year", "smth else"])
 
 block content

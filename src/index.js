@@ -13,3 +13,4 @@ import "./../assets/img/icons/download-arrow-down.svg";
 import "./../assets/img/icons/check-mark.svg";
 
 import "./../assets/js/sidebarToggle";
+import "./../assets/js/selector";

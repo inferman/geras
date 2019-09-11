@@ -1,7 +1,6 @@
 -const tabsList = ["Diagnostic History", "Risk reduction", "Geras Support", "Neuropsychiatric"];
 
-.main-tabs_box
-  ul.main-tabs_list.flex-container
-    each tab in tabsList
-      li(class=`flex-item ${tab === tabsList[2] ? 'active' : ''}`)
-        .main-tab_tab #{tab}
+ul.main-tabs_list.flex-container
+  each tab in tabsList
+    li(class=`flex-item ${tab === tabsList[0] ? 'active' : ''}`)
+      .main-tab_tab #{tab}

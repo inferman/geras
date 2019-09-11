@@ -1,14 +1,22 @@
 .sub-tabs_list {
   display: flex;
+  border-bottom: 1px solid #cbd6df;
   li {
     padding: 0 16px;
-    &:not(.active) {
-      border-bottom: 1px solid #cbd6df;
-    }
     &.active {
       border: {
         left: 1px solid #cbd6df;
         right: 1px solid #cbd6df;
+      }
+      position: relative;
+      &:after {
+        content: "";
+        background: #f4f6f9;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 2px;
+        width: 100%;
       }
     }
     &:first-child {

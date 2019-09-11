@@ -5,9 +5,22 @@
     max-width: 640px;
     margin-bottom: 24px;
   }
+  .second-level-tabs {
+    margin-bottom: 10px;
+  }
+  .selector-holder {
+    flex: 0 0 100%;
+  }
   @media screen and (min-width: 768px) {
     .top-level-tabs {
       margin-bottom: 18px;
+    }
+    .second-level-tabs {
+      max-width: 600px;
+      margin-bottom: 0;
+    }
+    .selector-holder {
+      flex: 0 0 auto;
     }
   }
   @media screen and (min-width: 1200px) {
