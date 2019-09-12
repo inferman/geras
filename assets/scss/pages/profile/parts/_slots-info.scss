@@ -12,7 +12,6 @@
   }
   .value {
     font-size: 24px;
-    letter-spacing: normal;
     margin-bottom: 8px;
   }
   .description {
@@ -20,7 +19,6 @@
       display: block;
       font-size: 14px;
       line-height: 19px;
-      letter-spacing: normal;
       &:not(:last-child) {
         margin-bottom: 4px;
       }

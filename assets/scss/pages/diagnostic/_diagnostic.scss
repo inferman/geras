@@ -1,6 +1,11 @@
 .diagnostic_tabs-container {
   padding: 20px 16px 0;
   // margin-bottom: 18px;
+  max-width: 1000px;
+  margin: {
+    left: auto;
+    right: auto;
+  };
   .top-level-tabs {
     max-width: 640px;
     margin-bottom: 24px;
@@ -25,5 +30,85 @@
   }
   @media screen and (min-width: 1200px) {
     padding: 0;
+  }
+}
+
+
+.diagnostic_user-card {
+  p {
+    font-size: 10px;
+    margin: 0;
+  }
+  .label {
+    color: $text-color_secondary;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .user_personal-info {
+    text-align: center;
+  }
+  .card_avatar {
+    background: $primary-color;
+  }
+  .avatar-icon {
+    height: 18px;
+    width: 16px;
+    fill: $white;
+  }
+  .user_metrics {
+    margin-bottom: 16px;
+  }
+  .user_metrics_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .user_email {
+    font-size: 12px;
+  }
+  .user-info {
+    color: $text-color_primary;
+    text-align: center;
+    margin-bottom: 16px;
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      &.light {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+  .user_metrics_item {
+    > span {
+      font-size: 10px;
+      margin-bottom: 5px;
+      &.value {
+        font-size: 20px;
+      }
+    }
+  }
+  .user_locale {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    dt {
+      color: $text-color_secondary;
+      font-size: 10px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    dd {
+      font-size: 14px;
+    }
+  }
+  .reviews_list {    
+    a {
+      font-size: 14px;
+      font-style: italic;
+      text-decoration: underline;
+    }
   }
 }
