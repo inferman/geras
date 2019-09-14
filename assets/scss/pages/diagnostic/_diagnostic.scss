@@ -1,6 +1,6 @@
+// Tabs config styles
 .diagnostic_tabs-container {
   padding: 20px 16px 0;
-  // margin-bottom: 18px;
   max-width: 1000px;
   margin: {
     left: auto;
@@ -33,8 +33,8 @@
   }
 }
 
-
-.diagnostic_user-card {
+// User Sidebar
+.diagnostic_card {
   p {
     font-size: 10px;
     margin: 0;
@@ -110,5 +110,8 @@
       font-style: italic;
       text-decoration: underline;
     }
+  }
+  .add-comment-btn {
+    color: $primary-color;
   }
 }
