@@ -53,21 +53,22 @@ block content
               a(href="#") Nu. Naia Stevensson
 
       //- COMMENTS CARD
-      .diagnostic_card.card-box.card-box--comments.no-borders.shadow
+      .diagnostic_card.card-box.card-box--comments.no-borders.shadow.card_comment
         .card_header
           .title Specialist comments
           .counter 4
         .card_body
-          .card_section
+          -for(let i = 0; i<=1; i++)
             .card_comment-box
               .comment_header
                 .comment_header_title
-                  +svgIcon()
+                  +svgIcon('notes-icon', 'comment_header_icon')
                   | Note
                 .comment_header_author
                   | Dr. Juan Son - 12/05/2019
               .comment_content
                 p Track at least 5 days a week for the period of one month Track at least 5 days a week for the period of one month..
+        
               
         .card_footer
           .card_section.flex.justify-end

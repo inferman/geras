@@ -111,6 +111,44 @@
       text-decoration: underline;
     }
   }
+}
+
+// Sidebar Comments Box
+.card_comment {
+  .card_comment-box {
+    padding: 22px 0;
+    &:not(:last-child) {border-bottom: 1px solid $inputs-border-color;}
+    
+  }
+  .comment_header {
+    margin-bottom: 8px;
+  }
+  .comment_header_title {
+    font-size: 14px;
+    color: $text-color_secondary;
+    margin-bottom: 8px;
+  }
+  .comment_header_icon {
+    width: 10px;
+    height: 12px;
+    fill: $text-color_additional;
+    margin-right: 8px;
+  }
+  .comment_header_author {
+    font-size: 12px;
+    color: #757575;
+  }
+  .comment_content {
+    color: $text-color_primary;
+    font-size: 14px;
+    p {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+  .card_footer {
+    border-top: 1px solid  $inputs-border-color;
+  }
   .add-comment-btn {
     color: $primary-color;
   }
