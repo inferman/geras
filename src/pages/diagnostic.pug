@@ -52,14 +52,14 @@ block content
             li
               a(href="#") Nu. Naia Stevensson
 
-      //- COMMENTS CARD
+      //- COMMENTS BLOCK
       .diagnostic_card.card-box.card-box--comments.no-borders.shadow.card_comment
         .card_header
           .title Specialist comments
           .counter 4
         .card_body
-          -for(let i = 0; i<=1; i++)
-            .card_comment-box
+          -for(let i = 0; i<=3; i++)
+            article.card_comment-box
               .comment_header
                 .comment_header_title
                   +svgIcon('notes-icon', 'comment_header_icon')
@@ -67,13 +67,42 @@ block content
                 .comment_header_author
                   | Dr. Juan Son - 12/05/2019
               .comment_content
-                p Track at least 5 days a week for the period of one month Track at least 5 days a week for the period of one month..
-        
-              
+                p Track at least 5 days a week for the period of one month Track at least 5 days a week for the period of one month..              
         .card_footer
           .card_section.flex.justify-end
             button(type="button").t_uppercase.add-comment-btn Add comment
 
+      //- EDIT HISTORY BLOCK
+      .diagnostic_card.card-box--history.card-box.no-borders.shadow.card_comment
+        .card_header
+          .title Edit History
+        .card_body
+          article.card_comment-box
+            .comment_header
+              .comment_header_title Profile information
+              .comment_header_author Dr. Juan Son - 12/05/2019
+            .comment_content
+              p Transcription: hat face ant panting pat
+          article.card_comment-box
+            .comment_header
+              .comment_header_title Immediate word recall 2 of 2
+              .comment_header_author Dr. Juan Son - 12/05/2019
+            .comment_content
+              p
+                | Name: Alexandra
+                | Age: 43
+          article.card_comment-box
+            .comment_header
+              .comment_header_title Digit span backward test immediate
+              .comment_header_author Dr. Juan Son - 12/05/2019
+            .comment_content
+              p Marked as correct
+          article.card_comment-box
+            .comment_header
+              .comment_header_title Draw Clock 1 of 3
+              .comment_header_author Dr. Juan Son - 12/05/2019
+            .comment_content
+              p Marked as correct
 
 
     //- CONTENT COLUMN

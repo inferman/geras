@@ -125,6 +125,7 @@
   }
   .comment_header_title {
     font-size: 14px;
+    font-weight: 600;
     color: $text-color_secondary;
     margin-bottom: 8px;
   }
@@ -151,5 +152,14 @@
   }
   .add-comment-btn {
     color: $primary-color;
+  }
+}
+
+.card-box {
+  &--comments {
+    .card_body { max-height: 330px; }
+  }
+  &--history {
+    .card_body { max-height: 485px; }
   }
 }
