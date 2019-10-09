@@ -6,10 +6,13 @@ block pageTitle
     h1 Patients
 
 block tabs
-  .diagnostic_tabs-container.flex-container.justify-between.align-center
-    .top-level-tabs.flex-item
+  .diagnostic_tabs-container
+    .top-level-tabs
       include ./../partitials/tabs/main-tabs
-    .selector-holder.flex-item
+    .flex-container.justify-between.align-center
+      .second-level-tabs.flex-item
+        include ./../partitials/tabs/sub-tabs
+      .selector-holder.flex-item
         +selector(0, ["this month", "this year", "smth else"])
 
 block content
@@ -105,52 +108,34 @@ block content
     //- CONTENT COLUMN
     .flex-item.item-md-9
       .flex-container
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between            
-              .flex-item.flex-item--shrink
-                .test-title Survey
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status Completed
-                .test-results Risk indicators <strong>12%</strong>
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between
-              .flex-item.flex-item--shrink
-                .test-title Questionnaire
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status Completed
-                .test-results Risk indicators <strong>12%</strong>
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between
-              .flex-item.flex-item--shrink
-                .test-title Amnesis
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status Completed
-                .test-results Risk indicators <strong>12%</strong>
-        
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between
-              .flex-item.flex-item--shrink
-                .test-title Cognitive test
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status Completed
-                .test-results Risk indicators <strong>12%</strong>
-            .diagnostic_test_body
-              .test_description_title Points
-              .flex-container.collapse
-                .flex-item.item-md-6.item-sm-12
-                  .bordered-box.flex-container.justify-between.collapse
-                    | 1
-                .flex-item.item-md-6.item-sm-12
-                  .bordered-box.flex-container.justify-between.collapse
-                    | 2
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem est at, eum id, saepe cupiditate impedit consequatur culpa vitae, debitis error minima. Neque itaque ut harum laborum reprehenderit praesentium impedit eligendi earum vitae inventore quia, nesciunt debitis facere quo ipsam libero totam iure adipisci vero beatae deserunt iusto deleniti aut! Vel pariatur enim facilis molestiae harum similique deleniti cum consectetur minima! Eius vel maiores hic odio commodi pariatur unde perspiciatis! Voluptate possimus, at optio id culpa libero blanditiis harum impedit velit totam, voluptatibus molestias illum iure illo, facere aut. Modi veritatis quia dignissimos tempore a cumque est commodi? Corporis, quaerat.
-          
-        
+        // Perfomance charts
+        .profile_chart-box.flex-item.item-lg-12
+          .card-box.profile_perfomans-chart
+            .box-title
+              h3 Performance this week            
+            .flex-container.justify-between.collapse
+              -for(let i=0; i<=1; i++)
+                .flex-item--shrink
+                  .profile_progress-box.flex.align-center
+                    .progress_chart
+                      .progress
+                      .value 22%
+                    .progress_legend
+                      .legend_description
+                        span.t_uppercase meetings
+                        span.t_uppercase done
+                      dl.dl--inline.perfomance-values
+                        dt 42
+                        dd 103
+                .flex-item--shrink
+                  .profile_progress-box.flex.align-center
+                    .progress_chart
+                      .progress
+                      .value 85%
+                    .progress_legend
+                      .legend_description
+                        span.t_uppercase meetings
+                        span.t_uppercase booked
+                      dl.dl--inline.perfomance-values
+                        dt 103
+                        dd 18
