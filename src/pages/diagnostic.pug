@@ -13,13 +13,13 @@ block tabs
         +selector(0, ["this month", "this year", "smth else"])
 
 block content
-  .diagnostic_content-wrapper.flex-container    
+  .diagnostic_content-wrapper.flex-container
     //- SIDEBAR COLUMN
     .flex-item.item-md-3
       //- USER PERSONAL INFO CARD
       .diagnostic_card.card-box.no-borders.shadow
         include ./../partitials/diagnostic/personal-info.pug
-              
+
       //- COMMENTS BLOCK
       .diagnostic_card.card-box.card-box--comments.no-borders.shadow.card_comment
         include ./../partitials/diagnostic/comments.pug
@@ -41,6 +41,8 @@ block content
                 .test-status_box
                   span.status_text Completed
                 .test-results Risk indicators <strong>12%</strong>
+            include ./../partitials/diagnostic/simple-questions.pug
+
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
             .diagnostic_test_header.flex-container.justify-between
