@@ -178,18 +178,35 @@
     font-size: 12px;
     color: $light-grey;
   }
-  .test-status {
+  .test-status_box {
     font-size: 12px;
     font-weight: 600;
     color: $text-color_secondary;
-    border: 2px solid $text-color_secondary;
-    padding: 4px 20px;
+    border: 2px solid;
     text-align: center;
     margin-bottom: 8px;
+    min-width: 124px;
+    display: flex;
+    &--not-completed { color: $error-color; }
+  }
+  .status_text {
+    flex: 1 1 0px;
+    padding: 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .status_selector {
+    flex: 0 0 20px;
+    color: inherit;
+    border-left: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .test-results {
     font-size: 12px;
     color: $light-grey;
+    text-align: right;
   }
 }
 

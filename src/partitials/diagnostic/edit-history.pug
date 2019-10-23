@@ -1,0 +1,46 @@
+-
+  const data = [
+    {
+      "title": "Profile information",
+      "author": "Dr. Juan Son - 12/05/2019",
+      "prescription": [
+        {"title": "Transcription", "val": "hat face ant panting pat"}
+      ],
+      "content": ""
+    },
+    {
+      "title": "Immediate word recall 2 of 2",
+      "author": "Dr. Juan Son - 12/05/2019",
+      "prescription": [
+        {"title": "Name", "val": "lexandra"},
+        {"title": "Age", "val": "43"}
+      ],
+      "content": ""},
+    {
+      "title": "Digit span backward test immediate",
+      "author": "Dr. Juan Son - 12/05/2019",
+      "prescription": [],
+      "content": "Marked as correct"
+    },
+    {
+      "title": "Draw Clock 1 of 3",
+      "author": "Dr. Juan Son - 12/05/2019",
+      "prescription": [],
+      "content": "Marked as correct"      
+    }
+  ];
+
+.card_header
+  .title Edit History
+.card_body
+  each item in data
+    article.card_comment-box
+      .comment_header
+        .comment_header_title #{item.title}
+        .comment_header_author #{item.author}
+      .comment_content
+        if item.prescription.length
+          each i in item.prescription
+            p #{i.title}: #{i.val}
+        if item.content
+          p #{item.content}

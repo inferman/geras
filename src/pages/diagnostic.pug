@@ -16,91 +16,17 @@ block content
   .diagnostic_content-wrapper.flex-container    
     //- SIDEBAR COLUMN
     .flex-item.item-md-3
-
       //- USER PERSONAL INFO CARD
       .diagnostic_card.card-box.no-borders.shadow
-        .user_personal-info.card_section.card_section--mod
-          .card_avatar
-            +svgIcon('user-icon', 'avatar-icon')
-          .user-info
-            p Aleksandra Romaniak
-            p.light Female, 44 years old
-          ul.user_metrics.flex-container
-            each _ in [1,2,3]     
-              li.flex-item.item-sm-4.user_metrics_item
-                span.t_uppercase Height
-                span.value 175
-                span Cms
-          a(href="mailto:aleksandra.r@gerassolutions.com").user_email aleksandra.r@gerassolutions.com
-        .card_section
-          each _ in [1,2,3]
-            dl.user_locale
-              dt.t_uppercase Language
-              dd English
-        .card_section.user_risks          
-          p.label Risk probabilities
-          p 50% Based on latest test
-
-        .card_section.reviews_list
-          p.label Specialist reviewing
-          ul
-            li
-              a(href="#") Dr. Juan Son            
-            li
-              a(href="#") Nu. Naia Stevensson
-
+        include ./../partitials/diagnostic/personal-info.pug
+              
       //- COMMENTS BLOCK
       .diagnostic_card.card-box.card-box--comments.no-borders.shadow.card_comment
-        .card_header
-          .title Specialist comments
-          .counter 4
-        .card_body
-          -for(let i = 0; i<=3; i++)
-            article.card_comment-box
-              .comment_header
-                .comment_header_title
-                  +svgIcon('notes-icon', 'comment_header_icon')
-                  | Note
-                .comment_header_author
-                  | Dr. Juan Son - 12/05/2019
-              .comment_content
-                p Track at least 5 days a week for the period of one month Track at least 5 days a week for the period of one month..              
-        .card_footer
-          .card_section.flex.justify-end
-            button(type="button").t_uppercase.add-comment-btn Add comment
+        include ./../partitials/diagnostic/comments.pug
 
       //- EDIT HISTORY BLOCK
       .diagnostic_card.card-box--history.card-box.no-borders.shadow.card_comment
-        .card_header
-          .title Edit History
-        .card_body
-          article.card_comment-box
-            .comment_header
-              .comment_header_title Profile information
-              .comment_header_author Dr. Juan Son - 12/05/2019
-            .comment_content
-              p Transcription: hat face ant panting pat
-          article.card_comment-box
-            .comment_header
-              .comment_header_title Immediate word recall 2 of 2
-              .comment_header_author Dr. Juan Son - 12/05/2019
-            .comment_content
-              p
-                | Name: Alexandra
-                | Age: 43
-          article.card_comment-box
-            .comment_header
-              .comment_header_title Digit span backward test immediate
-              .comment_header_author Dr. Juan Son - 12/05/2019
-            .comment_content
-              p Marked as correct
-          article.card_comment-box
-            .comment_header
-              .comment_header_title Draw Clock 1 of 3
-              .comment_header_author Dr. Juan Son - 12/05/2019
-            .comment_content
-              p Marked as correct
-
+        include ./../partitials/diagnostic/edit-history.pug
 
     //- CONTENT COLUMN
     .flex-item.item-md-9
@@ -112,7 +38,8 @@ block content
                 .test-title Survey
                 .test-date 26/07/2018 11:42
               .flex-item.flex-item--shrink
-                .test-status Completed
+                .test-status_box
+                  span.status_text Completed
                 .test-results Risk indicators <strong>12%</strong>
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
@@ -121,8 +48,14 @@ block content
                 .test-title Questionnaire
                 .test-date 26/07/2018 11:42
               .flex-item.flex-item--shrink
-                .test-status Completed
-                .test-results Risk indicators <strong>12%</strong>
+                .test-status_box.test-status_box--not-completed
+                  span.status_text Not completed
+                  span.status_selector
+                    include ./../../assets/img/icons/arrow-down.svg
+                .test-results
+                  | Points&nbsp;
+                  <strong>5</strong>
+                  | / 60
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
             .diagnostic_test_header.flex-container.justify-between
@@ -130,7 +63,8 @@ block content
                 .test-title Amnesis
                 .test-date 26/07/2018 11:42
               .flex-item.flex-item--shrink
-                .test-status Completed
+                .test-status_box
+                  span.status_text Completed
                 .test-results Risk indicators <strong>12%</strong>
         
         .flex-item.item-sm-12
@@ -140,8 +74,11 @@ block content
                 .test-title Cognitive test
                 .test-date 26/07/2018 11:42
               .flex-item.flex-item--shrink
-                .test-status Completed
-                .test-results Risk indicators <strong>12%</strong>
+                .test-status_box
+                  span.status_text Completed
+                .test-results
+                  | Risk indicators
+                  <strong>12%</strong>
             .diagnostic_test_body
               .test_description_title Points
               .flex-container.collapse

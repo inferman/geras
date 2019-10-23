@@ -1,0 +1,29 @@
+.user_personal-info.card_section.card_section--mod
+  .card_avatar
+    +svgIcon('user-icon', 'avatar-icon')
+  .user-info
+    p Aleksandra Romaniak
+    p.light Female, 44 years old
+  ul.user_metrics.flex-container
+    each _ in [1,2,3]     
+      li.flex-item.item-sm-4.user_metrics_item
+        span.t_uppercase Height
+        span.value 175
+        span Cms
+  a(href="mailto:aleksandra.r@gerassolutions.com").user_email aleksandra.r@gerassolutions.com
+.card_section
+  each _ in [1,2,3]
+    dl.user_locale
+      dt.t_uppercase Language
+      dd English
+.card_section.user_risks          
+  p.label Risk probabilities
+  p 50% Based on latest test
+
+.card_section.reviews_list
+  p.label Specialist reviewing
+  ul
+    li
+      a(href="#") Dr. Juan Son            
+    li
+      a(href="#") Nu. Naia Stevensson

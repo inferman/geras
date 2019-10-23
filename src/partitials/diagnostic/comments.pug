@@ -1,0 +1,17 @@
+.card_header
+  .title Specialist comments
+  .counter 4
+.card_body
+  -for(let i = 0; i<=3; i++)
+    article.card_comment-box
+      .comment_header
+        .comment_header_title
+          +svgIcon('notes-icon', 'comment_header_icon')
+          | Note
+        .comment_header_author
+          | Dr. Juan Son - 12/05/2019
+      .comment_content
+        p Track at least 5 days a week for the period of one month Track at least 5 days a week for the period of one month..              
+.card_footer
+  .card_section.flex.justify-end
+    button(type="button").t_uppercase.add-comment-btn Add comment
