@@ -1,4 +1,4 @@
-extends ./../layouts/main 
+extends ./../layouts/main
 
 block pageTitle
   .page-title.hidden-xl-up
@@ -13,6 +13,41 @@ block tabs
         +selector(0, ["this month", "this year", "smth else"])
 
 block content
+  include ./../partitials/diagnostic/question-mixin
+  include ./../partitials/diagnostic/cognitive-chart-item
+  -
+    const data1 = [{
+      "title": "Delayed Word Recall",
+      "counter": "5",
+      "tiles": [
+        {
+          "blockTitle": {},
+          "answersData": [
+            {"key": "Expect", "val": ["They are vegetables"]},
+            {"key": "Anwer", "val": ["They are fruits"]},
+            {"key": "Something else", "val": ["Very boring descriprion about nothing. Just to get long string, that it. Anyway it's just a characters that hasn't any sens. Daewoo sens. I've heard you have servers"]},
+          ]
+        }
+      ],
+      
+    }];
+  -
+    const data2 = [{
+      "title": "Delayed Word Recall",
+      "counter": "5",
+      "tiles": [
+        {
+          "blockTitles": {},
+          "answersData": [
+            {"key": "Expect", "val": ["They are vegetables"]},
+            {"key": "Anwer", "val": ["They are fruits"]},
+            {"key": "Something else", "val": ["Very boring descriprion "]},
+            {"key": "Anwer", "val": ["They are fruits"]},
+          ]
+        }
+      ],
+      
+    }];
   .diagnostic_content-wrapper.flex-container
     //- SIDEBAR COLUMN
     .flex-item.item-md-3
@@ -41,8 +76,9 @@ block content
                 .test-status_box
                   span.status_text Completed
                 .test-results Risk indicators <strong>12%</strong>
-            include ./../partitials/diagnostic/simple-questions.pug
-
+            .diagnostic_test_body            
+              +question-mixin(data1)
+            
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
             .diagnostic_test_header.flex-container.justify-between
@@ -58,6 +94,8 @@ block content
                   | Points&nbsp;
                   <strong>5</strong>
                   | / 60
+            .diagnostic_test_body
+              +question-mixin(data2)
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
             .diagnostic_test_header.flex-container.justify-between
@@ -68,6 +106,8 @@ block content
                 .test-status_box
                   span.status_text Completed
                 .test-results Risk indicators <strong>12%</strong>
+            .diagnostic_test_body
+              +question-mixin(data1)
         
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
@@ -79,17 +119,15 @@ block content
                 .test-status_box
                   span.status_text Completed
                 .test-results
-                  | Risk indicators
-                  <strong>12%</strong>
+                  | Risk indicators <strong>12%</strong>
             .diagnostic_test_body
-              .test_description_title Points
-              .flex-container.collapse
-                .flex-item.item-md-6.item-sm-12
-                  .bordered-box.flex-container.justify-between.collapse
-                    | 1
-                .flex-item.item-md-6.item-sm-12
-                  .bordered-box.flex-container.justify-between.collapse
-                    | 2
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem est at, eum id, saepe cupiditate impedit consequatur culpa vitae, debitis error minima. Neque itaque ut harum laborum reprehenderit praesentium impedit eligendi earum vitae inventore quia, nesciunt debitis facere quo ipsam libero totam iure adipisci vero beatae deserunt iusto deleniti aut! Vel pariatur enim facilis molestiae harum similique deleniti cum consectetur minima! Eius vel maiores hic odio commodi pariatur unde perspiciatis! Voluptate possimus, at optio id culpa libero blanditiis harum impedit velit totam, voluptatibus molestias illum iure illo, facere aut. Modi veritatis quia dignissimos tempore a cumque est commodi? Corporis, quaerat.
+              section.cognitive-test_section
+                include ./../partitials/diagnostic/cognitive-summary-results
+              section.cognitive-test_section              
+                include ./../partitials/diagnostic/cognitive-charts.pug
+              section.cognitive-test_section
+                include ./../partitials/diagnostic/cognitive-exercises
+                
+              
           
         

@@ -1,0 +1,16 @@
+-
+  const chartsData = [
+    {"title": "memory", "duration": "13:09 min", "progress": "20%"},
+    {"title": "Visuospatial abilities", "duration": "16:11 min", "progress": "80%"},
+    {"title": "Executive functioning", "duration": "8:05 min", "progress": "54%"},
+    {"title": "Attention, concentration, working memory", "duration": "19:45 min", "progress": "15%"},
+    {"title": "language", "duration": "21:10 min", "progress": "80%"},
+    {"title": "Orientation", "duration": "14:38 min", "progress": "70%"}
+  ]
+  
+.test_summary-charts
+  .test_description_title Test Preliminary Results
+  .flex-container
+    each item in chartsData
+      .flex-item.item-md-6
+        +cognetive-chart(item)

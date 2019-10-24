@@ -13,6 +13,7 @@ import "./../assets/img/icons/download-arrow-down.svg";
 import "./../assets/img/icons/check-mark.svg";
 import "./../assets/img/icons/doctor-icon.svg";
 import "./../assets/img/icons/notes-icon.svg";
+import "./../assets/img/icons/clock-icon.svg";
 
 import "./../assets/js/sidebarToggle";
 import "./../assets/js/selector";

@@ -1,0 +1,79 @@
+-
+  const exersisesData = [
+    {
+      "title": "memory",
+      "categories": [
+        {
+          "title": "Delayed Pattern Recall",
+          "counter": "4",
+          "tiles": [
+            {
+              "blockTitle": {},
+              "answersData": [
+                {"key": "Time used", "val": ["51.80 sec", "40.21 sec", "9.59 sec"]},
+                {"key": "Expect", "val": ["They are vegetables"]},
+                {"key": "Anwer", "val": ["Correct"]}
+              ]
+            },
+            {
+              "blockTitle": {},
+              "answersData": [
+                {"key": "Time used", "val": ["51.80 sec", "40.21 sec", "9.59 sec"]},
+                {"key": "Expect", "val": ["They are vegetables"]},
+                {"key": "Anwer", "val": ["Correct"]}
+              ]
+            },
+          ],          
+        },
+        {
+          "title": "Delayed Pattern Recall",
+          "counter": "4",
+          "tiles": [
+            {
+              "blockTitle": {},
+              "answersData": [
+                {"key": "Time used", "val": ["51.80 sec", "40.21 sec", "9.59 sec"]},
+                {"key": "Expect", "val": ["They are vegetables"]},
+                {"key": "Anwer", "val": ["Correct"]}
+              ]
+            },
+            {
+              "blockTitle": {},
+              "answersData": [
+                {"key": "Time used", "val": ["51.80 sec", "40.21 sec", "9.59 sec"]},
+                {"key": "Expect", "val": ["They are vegetables"]},
+                {"key": "Anwer", "val": ["Correct"]}
+              ]
+            },
+          ],
+        }
+      ]
+    },
+    {
+      "title": "Visuospatial abilities",
+      "categories": []
+    },
+    {
+      "title": "Executive functioning",
+      "categories": []
+    },
+    {
+      "title": "Attention, concentration, working memory",
+      "categories": []
+    },
+    {
+      "title": "Language",
+      "categories": []
+    },
+    {
+      "title": "Orientation",
+      "categories": []
+    }
+    
+  ];
+
+.test_description_title Test exercises
+each item in exersisesData
+  .exercise_category
+    h3 #{item.title}
+    +question-mixin(item.categories)

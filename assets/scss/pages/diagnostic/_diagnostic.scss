@@ -1,4 +1,5 @@
 @import './diagnostic-question';
+@import './cognetive-chart-item';
 
 // Tabs config styles
 .diagnostic_tabs-container {
@@ -212,12 +213,60 @@
   }
 }
 
-.diagnostic_test_header {
-  &:not(:last-child) {
-    margin-bottom: 24px;
+.diagnostic_test_body {
+  padding-top: 20px;
+  
+}
+
+.cognitive-test_section {
+  margin-bottom: 20px;
+}
+
+.test_description_title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.test_summary-points {
+  .bordered-box {
+    padding: 20px;
+    border: 1px solid $border-color;    
+  }
+  .points-item { max-width: 25%; }
+  dl {
+    color: $light-grey;
+    .bold-title { color: #000; }
+    &:not(.decreased-fz) {
+      dt {
+        font-size: 14px;
+        line-height: 19px;
+      }
+      dd {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    dt {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+    dd {
+      font-size: 10px;
+      line-height: 14px;
+    }
   }
 }
 
-.diagnostic_test_body {
-  padding-top: 20px;
+.exercise_category {
+  margin-bottom: 16px;
+  > h3 {
+    color: $text-color_secondary;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
 }

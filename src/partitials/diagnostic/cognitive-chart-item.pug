@@ -1,0 +1,11 @@
+mixin cognetive-chart(data)
+  .cognitive-chart_box
+    h3 #{data.title}
+    .cognitive_progress-chart
+    .cognitive_chart-data.flex.justify-between.align-center
+      .flex-item--shrink
+        .flex.align-center
+          +svgIcon('clock-icon', 'cognitive_clock-icon')
+          span.bold #{data.duration}
+      .flex-item--shrink
+        span.bold #{data.progress}

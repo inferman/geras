@@ -1,0 +1,36 @@
+.test_summary-charts {
+  h3 {
+    font-size: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+}
+.cognitive-chart_box { margin-bottom: 16px; }
+.cognitive_progress-chart {
+  border: 1px solid $inputs-border-color;
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 6px;
+  &:after {
+    content: '';
+    background: linear-gradient(148.43deg, #92DE50 0%, #72AB41 100%);;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
+  }
+}
+.cognitive_chart-data {
+  .bold { font-weight: 600; }
+  span { font-size: 12px; }
+}
+
+.cognitive_clock-icon {
+  height: 12px;
+  width: 12px;
+  &:not(last-child) { margin-right: 6px; }
+}
