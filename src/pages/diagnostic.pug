@@ -13,7 +13,10 @@ block tabs
         +selector(0, ["this month", "this year", "smth else"])
 
 block content
-  include ./../partitials/diagnostic/question-mixin
+  include ./../partitials/diagnostic/questions-mixin/question.pug
+  include ./../partitials/diagnostic/questions-mixin/question-spoiler.pug
+  include ./../partitials/diagnostic/questions-mixin/question-block.pug
+
   include ./../partitials/diagnostic/cognitive-chart-item
   -
     const data1 = [{

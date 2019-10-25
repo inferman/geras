@@ -1,0 +1,7 @@
+mixin question-mixin(data)
+  each item in data
+    section.spoiler_box
+      +question-spoiler(item)
+    if item.tiles.length
+      each tile, index in item.tiles
+        +question-block(tile, index, item.tiles.length)

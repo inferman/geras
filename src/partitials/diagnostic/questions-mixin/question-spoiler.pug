@@ -1,0 +1,7 @@
+mixin question-spoiler(item)
+  .spoiler_header.diagnostic_question_header
+    .flex.justify-between
+      .flex-item--shrink
+        h3 #{item.title}
+      .flex-item--shrink
+        span Points #[strong #{item.counter}] / #{item.tiles.length}
