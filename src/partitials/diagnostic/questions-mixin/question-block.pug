@@ -1,7 +1,7 @@
 mixin question-block(tile, index, tilesCounter)
   .spoiler_body
     .diagnostic_question_body
-    
+
       // Test title
       .block-title.flex.justify-between.align-center
         .flex-item--shrink
@@ -22,7 +22,7 @@ mixin question-block(tile, index, tilesCounter)
           button(type="button").g_btn.g_btn--primary Edit
 
       // Test Picture block
-      if(tile.testPicture.image)
+      if(tile.testPicture && tile.testPicture.image)
         .block-picture
           .pic-holder
             img(src="#{tile.testPicture.image}")

@@ -4,13 +4,12 @@
 // Tabs config styles
 .diagnostic_tabs-container {
   padding: 20px 16px 0;
-  max-width: 1000px;
+  width: 100%;
   margin: {
     left: auto;
     right: auto;
   };
   .top-level-tabs {
-    max-width: 640px;
     margin-bottom: 24px;
   }
   .second-level-tabs {
@@ -21,7 +20,8 @@
   }
   @media screen and (min-width: 768px) {
     .top-level-tabs {
-      margin-bottom: 18px;
+    max-width: 640px;
+    margin-bottom: 18px;
     }
     .second-level-tabs {
       max-width: 600px;
@@ -32,6 +32,7 @@
     }
   }
   @media screen and (min-width: 1200px) {
+    max-width: 1000px;
     padding: 0;
   }
 }

@@ -3,12 +3,10 @@
   > li {
     flex: 1 1 0px;
     text-align: center;
-    max-width: 110px;
   }
   @media screen and (min-width: 768px) {
     > li {
       flex: 0 0 auto;
-      max-width: 100%;
     }
   }
 }
