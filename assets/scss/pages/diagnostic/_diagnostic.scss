@@ -214,6 +214,39 @@
   }
 }
 
+.diagnostic_card-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  svg {
+    margin-right: 10px;
+    height: 18px;
+    width: 20px;
+  }
+}
+
+.diagnostic_family-info {
+  margin-bottom: 24px;
+  dt {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  dd { font-size: 14px; }
+}
+
+.diagnostic_test_summary {
+  &:not(:last-child) { margin-bottom: 8px; }
+  &--outlined {
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    padding: 14px;
+  }
+}
+
 .diagnostic_test_body {
   padding-top: 20px;
   

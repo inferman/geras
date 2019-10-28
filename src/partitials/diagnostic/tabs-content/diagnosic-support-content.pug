@@ -1,0 +1,46 @@
+.flex-item.item-sm-12
+  .card-box.diagnostic_test-box
+    .diagnostic_card-title
+      +svgIcon('heart-icon')
+      h3 Family member
+    .diagnostic_family-info.flex.flex-wrap.align-center.justify-between
+      dl.flex-item--shrink
+        dt Name
+        dd Emily
+      dl.flex-item--shrink
+        dt Last name
+        dd Richards
+      dl.flex-item--shrink
+        dt email
+        dd emilyrichards@gmail.com
+      dl.flex-item--shrink
+        dt Date added
+        dd 12/07/2019      
+    .diagnostic_test_summary.diagnostic_test_summary--outlined
+      +test-summary-mixin({"title": "Survey", "date": "26/07/2018 11:42", "status": "Completed", "risk": "12%"})
+    .diagnostic_test_summary.diagnostic_test_summary--outlined
+      +test-summary-mixin({"title": "Amnesis", "date": "26/07/2018 11:42", "status": "Completed", "risk": "12%"})
+
+
+.flex-item.item-sm-12
+  .card-box.diagnostic_test-box
+    .diagnostic_card-title
+      +svgIcon('heart-icon')
+      h3 Family member
+    .diagnostic_family-info.flex.flex-wrap.align-center.justify-between
+      dl.flex-item--shrink
+        dt Name
+        dd Josh
+      dl.flex-item--shrink
+        dt Last name
+        dd Richards
+      dl.flex-item--shrink
+        dt email
+        dd joshrichards@gmail.com
+      dl.flex-item--shrink
+        dt Date added
+        dd 12/07/2019      
+    .diagnostic_test_summary.diagnostic_test_summary--outlined
+      +test-summary-mixin({"title": "Amnesis", "date": "26/07/2018 11:42", "status": "Completed", "risk": "12%"})
+    .diagnostic_test_summary.diagnostic_test_summary--outlined
+      +test-summary-mixin({"title": "Survey", "date": "26/07/2018 11:42", "status": "Completed", "risk": "12%"})

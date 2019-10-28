@@ -19,39 +19,7 @@ block content
   include ./../partitials/diagnostic/test-summary-mixin
 
   include ./../partitials/diagnostic/cognitive-chart-item
-  -
-    const data1 = [{
-      "title": "Delayed Word Recall",
-      "counter": "5",
-      "tiles": [
-        {
-          "blockTitle": {},
-          "answersData": [
-            {"key": "Expect", "val": ["They are vegetables"]},
-            {"key": "Anwer", "val": ["They are fruits"]},
-            {"key": "Something else", "val": ["Very boring descriprion about nothing. Just to get long string, that it. Anyway it's just a characters that hasn't any sens. Daewoo sens. I've heard you have servers"]},
-          ]
-        }
-      ],
-      
-    }];
-  -
-    const data2 = [{
-      "title": "Delayed Word Recall",
-      "counter": "5",
-      "tiles": [
-        {
-          "blockTitles": {},
-          "answersData": [
-            {"key": "Expect", "val": ["They are vegetables"]},
-            {"key": "Anwer", "val": ["They are fruits"]},
-            {"key": "Something else", "val": ["Very boring descriprion "]},
-            {"key": "Anwer", "val": ["They are fruits"]},
-          ]
-        }
-      ],
-      
-    }];
+ 
   .diagnostic_content-wrapper.flex-container
     //- SIDEBAR COLUMN
     .flex-item.item-md-3
@@ -70,50 +38,10 @@ block content
     //- CONTENT COLUMN
     .flex-item.item-md-9
       .flex-container
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_summary
-              +test-summary-mixin({"title": "Survey", "date": "26/07/2018 11:42", "status": "Completed", "risk": "12%", "additionalClass": ""})
-            .diagnostic_test_body            
-              +question-mixin(data1)
-            
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_summary
-              +test-summary-mixin({"title": "Questionnaire", "date": "26/07/2018 11:42", "status": "Not completed", "risk": "2%", "additionalClass": ""})              
-            .diagnostic_test_body
-              +question-mixin(data2)
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_summary.flex-container.justify-between
-              .flex-item.flex-item--shrink
-                .test-title Amnesis
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status_box
-                  span.status_text Completed
-                .test-results Risk indicators <strong>12%</strong>
-            .diagnostic_test_body
-              +question-mixin(data1)
-        
-        .flex-item.item-sm-12
-          .card-box.diagnostic_test-box
-            .diagnostic_test_summary.flex-container.justify-between
-              .flex-item.flex-item--shrink
-                .test-title Cognitive test
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status_box
-                  span.status_text Completed
-                .test-results
-                  | Risk indicators <strong>12%</strong>
-            .diagnostic_test_body
-              section.cognitive-test_section
-                include ./../partitials/diagnostic/cognitive-summary-results
-              section.cognitive-test_section              
-                include ./../partitials/diagnostic/cognitive-charts.pug
-              section.cognitive-test_section
-                include ./../partitials/diagnostic/cognitive-exercises
+        //- include ./../partitials/diagnostic/tabs-content/diagnosic-history-content
+        include ./../partitials/diagnostic/tabs-content/diagnosic-support-content
+
+      
                 
               
           
