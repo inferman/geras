@@ -16,3 +16,11 @@ mixin question-block(tile, index, tilesCounter)
                   dd #{val}
         .inner-wrapper.inner-wrapper--actions
           button(type="button").g_btn.g_btn--primary Edit
+      if(tile.testPicture)
+        .block-picture
+          .pic-holder
+            img(src="")
+          .btn-holder
+            button(type="button").g_btn.play-btn
+              +svgIcon('play-icon', 'play-icon')
+              | Play drawing process

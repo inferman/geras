@@ -1,5 +1,6 @@
 mixin question-spoiler(item)
-  .spoiler_header.diagnostic_question_header
+  -const openClass = item.tiles.length ? 'isOpen' : '';
+  .spoiler_header.diagnostic_question_header(class=openClass)
     .flex.justify-between
       .flex-item--shrink
         h3 #{item.title}

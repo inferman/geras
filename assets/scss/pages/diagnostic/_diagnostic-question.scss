@@ -6,12 +6,14 @@ $answer-min-width: 120px;
 }
 .spoiler_header {
   border-radius: 4px;
-  color: $white;
-  background: $dark-blue;
+  background: $bg-color_primary;
   padding: 8px 14px;
   font-size: 16px;
   cursor: pointer;
-  &.isOpen { background: $bg-color_primary; }
+  &.isOpen {
+    background: $dark-blue;
+    color: $white;
+  }
 }
 
 .spoiler_body { padding: 10px; }
@@ -40,6 +42,27 @@ $answer-min-width: 120px;
       font-size: 10px;
       font-weight: 400;
       text-transform: uppercase;
+    }
+  }
+  .block-picture {
+    margin: 0 auto;
+    .pic-holder {
+      margin: 20px auto 15px;
+      height: 230px;
+      width: 230px;
+    }
+    .btn-holder { text-align: center; }
+  }
+  .play-btn {
+    color: $text-color_primary;
+    border: 1px solid;
+    padding: 0 12px;
+    font-size: 12px;
+    width: auto;
+    .play-icon {
+      height: 8px;
+      width: 10px;
+      margin-right: 5px;
     }
   }
 }
