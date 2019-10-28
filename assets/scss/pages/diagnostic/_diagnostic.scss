@@ -217,7 +217,10 @@
 .diagnostic_card-title {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  &.bordered {
+    border-bottom: 1px solid $text-color_additional;
+  }
   h3 {
     font-size: 16px;
     font-weight: 600;
