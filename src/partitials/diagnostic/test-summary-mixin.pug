@@ -1,0 +1,23 @@
+//- TYPE
+ data: {
+    title: string;
+    date: string;
+    status: string;
+    risk: string;
+    additionalClass?: string;
+  }
+
+mixin test-summary-mixin(data)
+  - const statusClass = data.status !== "Completed" ? "test-status_box--not-completed" : "";
+
+  .flex-container.justify-between            
+    .flex-item.flex-item--shrink
+      .test-title #{data.title}
+      .test-date #{data.date}
+    .flex-item.flex-item--shrink
+      .test-status_box(class=statusClass)
+        span.status_text #{data.status}
+        if data.status !== "Completed"
+          span.status_selector
+            include ./../../../assets/img/icons/arrow-down.svg
+      .test-results Risk indicators #[strong #{data.risk}]

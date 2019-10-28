@@ -16,6 +16,7 @@ block content
   include ./../partitials/diagnostic/questions-mixin/question.pug
   include ./../partitials/diagnostic/questions-mixin/question-spoiler.pug
   include ./../partitials/diagnostic/questions-mixin/question-block.pug
+  include ./../partitials/diagnostic/test-summary-mixin
 
   include ./../partitials/diagnostic/cognitive-chart-item
   -
@@ -71,37 +72,20 @@ block content
       .flex-container
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between            
-              .flex-item.flex-item--shrink
-                .test-title Survey
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status_box
-                  span.status_text Completed
-                .test-results Risk indicators <strong>12%</strong>
+            .diagnostic_test_summary
+              +test-summary-mixin({"title": "Survey", "date": "26/07/2018 11:42", "status": "Completed", "risk": "12%", "additionalClass": ""})
             .diagnostic_test_body            
               +question-mixin(data1)
             
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between
-              .flex-item.flex-item--shrink
-                .test-title Questionnaire
-                .test-date 26/07/2018 11:42
-              .flex-item.flex-item--shrink
-                .test-status_box.test-status_box--not-completed
-                  span.status_text Not completed
-                  span.status_selector
-                    include ./../../assets/img/icons/arrow-down.svg
-                .test-results
-                  | Points&nbsp;
-                  <strong>5</strong>
-                  | / 60
+            .diagnostic_test_summary
+              +test-summary-mixin({"title": "Questionnaire", "date": "26/07/2018 11:42", "status": "Not completed", "risk": "2%", "additionalClass": ""})              
             .diagnostic_test_body
               +question-mixin(data2)
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between
+            .diagnostic_test_summary.flex-container.justify-between
               .flex-item.flex-item--shrink
                 .test-title Amnesis
                 .test-date 26/07/2018 11:42
@@ -114,7 +98,7 @@ block content
         
         .flex-item.item-sm-12
           .card-box.diagnostic_test-box
-            .diagnostic_test_header.flex-container.justify-between
+            .diagnostic_test_summary.flex-container.justify-between
               .flex-item.flex-item--shrink
                 .test-title Cognitive test
                 .test-date 26/07/2018 11:42
