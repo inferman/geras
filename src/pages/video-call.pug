@@ -1,0 +1,39 @@
+extends ./../layouts/main
+
+block pageTitle 
+  .page-title    
+    h1 Video call
+
+block content
+  .video_call-box.card-box.no-borders.flex.justify-center
+    .inner-holder
+      .call_info
+        p Meeting with #[strong John Svensson] will start in:
+        p At 14:00 with John Svensson - 44 years old
+      .call_countdown 00:00:12:45
+      .call_button
+        button(type="button").t_uppercase.g_btn.g_btn--primary Call now
+  
+  .flex-container
+    .flex-item.item-md-3
+      .diagnostic_card.card-box.no-borders
+        .user_personal-info.card_section.card_section--mod
+          .card_avatar
+            +svgIcon('user-icon', 'avatar-icon')
+          .user-info
+            p Aleksandra Romaniak
+            p.light Female, 44 years old
+          ul.user_metrics.flex-container
+            each _ in [1,2,3]     
+              li.flex-item.item-sm-4.user_metrics_item
+                span.t_uppercase Height
+                span.value 175
+                span Cms
+          a(href="mailto:aleksandra.r@gerassolutions.com").user_email aleksandra.r@gerassolutions.com
+    .flex-item.item-md-9
+      .chat_box.card-box.no-borders
+        ul.tabs_container.flex.align-center
+          li Add note
+          li Add recommendation
+          li.active Text chat
+        textarea(rows="8").chat_messages-list
