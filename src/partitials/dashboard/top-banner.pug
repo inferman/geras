@@ -1,0 +1,27 @@
+.card-box.flex-container.collapse.no-borders
+  .flex-item.item-sm-8
+    .top-banner_greatings.flex.flex--wrap.baner-wrapper
+      .user_box.flex-item
+        h2 Welcome,
+        span.user_name Dr. Susanna Jackson
+        a(href="mailto:susannajackson@email.com").user_email susannajackson@email.com
+      .reminder-block.flex.align-center.flex-item
+        +svgIcon('calendar-icon', 'calendar-icon')
+        span.qty 12 
+        | meetings today
+
+  .flex-item.item-sm-4
+    .top-banner_scheduler
+      .flex.flex--wrap.inner-container
+        .flex.flex-item
+          .meeting-info.flex-item--stretch.flex.flex--wrap
+            .flex-item
+              span.label.t_uppercase Next meeting
+            .flex-item
+              .user_name John Svensson
+              .timer 00 : 00 : 12 : 45
+          .flex-item.icon-block
+            .icon-holder.flex.align-center.justify-center
+              +svgIcon('calendar-colored-icon', 'calendar-icon')
+        .flex-item.t_right
+          a(href="#").chat-link.t_uppercase go to video call

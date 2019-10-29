@@ -1,31 +1,44 @@
 extends ./../layouts/main
 
 block content 
-  section.dashboard_top-banner_box
-    .card-box.flex-container.collapse.no-borders
-      .flex-item.item-md-8
-        .top-banner_greatings
-          .user_box
-            h2 Welcome,
-            span.user_name Dr. Susanna Jackson
-            a(href="mailto:susannajackson@email.com").user_email susannajackson@email.com
-          .reminder-block.flex.align-center
-            +svgIcon('calendar-icon', 'calendar-icon')
-            span.qty 12 
-            | meetings today
+  - const dataTable = ["Nikki Johnsson", "Elma Wilson", "Martin Gibbs", "Jerome Russo", "Dottie Kim", "Hubert Duarte"];
 
-      .flex-item.item-md-4
-        .top-banner_scheduler
-          .flex.flex--wrap.inner-container
-            .flex.flex-item
-              .meeting-info.flex-item--stretch.flex.flex--wrap
-                .flex-item
-                  span.label.t_uppercase Next meeting
-                .flex-item
-                  .user_name John Svensson
-                  .timer 00 : 00 : 12 : 45
-              .flex-item.icon-block
-                .icon-holder.flex.align-center.justify-center
-                  +svgIcon('calendar-colored-icon', 'calendar-icon')
-            .flex-item.t_right
-              a(href="#").chat-link.t_uppercase go to video call
+  section.dashboard_top-banner_box
+    // TOP BANNER BLOCK
+    include ./../partitials/dashboard/top-banner
+  
+  section.dashboard_meetings_box
+    h1.title Meetings today
+    .card-box.no-borders
+      .flex-container
+        // CONTROLS
+        .flex-item
+          include ./../partitials/dashboard/calendar-ctrls
+          
+        // SCHEDULER BLOCK
+        .flex-item.item-md-8
+          .dashboard_scheduler_box.dump-block
+        // CALENDAR BLOCK
+        .flex-item.item-md-4
+          // CALENDAR
+          .dashboard_calendar_box.dump-block
+          // LEGEND
+          .dashboard_calendar_legend
+            h3.local-title.t_uppercase calendar
+            ul
+              li Booked meetings
+              li Available times
+              li Past meetings
+              li Past available times
+          // PATIENTS
+          .dashboard_calendar_patients-list
+            h3.local-title.t_uppercase Latest patients
+            table
+              each name in dataTable
+                tr
+                  td
+                    +svgIcon('user-icon', 'user-icon')
+                    | #{name}
+                  td 26/07/2018 11:42
+
+
