@@ -5,6 +5,11 @@
 .t_uppercase {
   text-transform: uppercase;
 }
+.t {
+  &_uppercase { text-transform: uppercase; }
+  &_right { text-align: right; }
+  &_left {text-align: left;}
+}
 
 .ellipsis {
   overflow: hidden;

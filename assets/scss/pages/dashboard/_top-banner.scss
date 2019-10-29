@@ -1,0 +1,78 @@
+.dashboard_top-banner_box {
+  .card-box { border-radius: 8px; }
+}
+.top-banner_greatings {
+  height: 100%;
+  padding: 24px 24px 24px 450px;
+  background: $white;
+  color: $text-color_primary;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .user_box {
+    margin-bottom: 36px;
+  }
+  .user_name {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .user_email {
+    color: $dark-blue;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: none;
+  }
+  .reminder-block {
+    width: 100%;
+    font-size: 14px;
+    .qty { margin-right: 4px; }
+  }
+  .calendar-icon {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+}
+
+.top-banner_scheduler {
+  background: $primary-color;
+  color: $white;
+  padding: 20px;
+  height: 100%;
+  .inner-container {
+    height: 100%;
+    align-content: space-between;
+  }
+  .label {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .user_name {
+    margin-bottom: 6px;
+  }
+  .meeting-info {
+    align-content: space-between;
+    font-weight: 600;
+  }
+  .icon-block {
+    flex: 0 0 82px;
+    max-width: 82px;
+  }
+  .icon-holder {
+    border-radius: 50px;
+    background: #9bc672;
+    width: 82px;
+    height: 82px;
+  }
+  .calendar-icon {
+    height: 50px;
+    width: 50px;
+  }
+  .chat-link {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}

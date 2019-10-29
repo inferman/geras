@@ -1,9 +1,12 @@
 .card-box {
   background: $white;
   border-radius: 4px;
-  padding: 20px 16px;
+  overflow: hidden;
   &:not(.no-borders) {
     border: 1px solid $border-color_primary;
+  }
+  &:not(.collapse) {
+    padding: 20px 16px;
   }
   &:not(:last-child) {
     margin-bottom: 8px;
