@@ -343,3 +343,13 @@
   }
 }
 
+.support_meetings {
+  h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+  table {
+    &:not(:last-child) { margin-bottom: 36px; }
+  }
+}

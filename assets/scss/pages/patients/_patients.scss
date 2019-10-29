@@ -15,35 +15,8 @@
 }
 
 .patient-history {
-  th {
-    color: #4a4a4a;
-    font-size: 10px;
-    text-transform: uppercase;
-    padding: 4px 8px;
-    &:last-child {
-      display: none;
-    }
-  }
-  tr {
-    text-align: left;
-  }
-  tbody {
-    tr {
-      &:nth-child(2n - 1) {
-        background: rgba(196, 196, 196, 0.15);
-      }
-    }
-  }
-
-  td {
-    color: #424242;
-    padding: 4px 8px;
-    font-size: 14px;
-    line-height: 1.25;
-    &:last-child {
-      display: none;
-    }
-  }
+  th:last-child { display: none; }
+  td:last-child { display: none; }
   @media screen and (min-width: 576px) {
     margin-top: 50px;
     th:last-child,

@@ -16,3 +16,31 @@
     display: block;
   }
 }
+
+
+.table--colored {
+  th {
+    color: #4a4a4a;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+  }
+  tr {
+    text-align: left;
+  }
+  tbody {
+    tr {
+      &:nth-child(2n - 1) {
+        background: rgba(196, 196, 196, 0.15);
+      }
+    }
+  }
+  td {
+    color: #424242;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  @media screen and (min-width: 576px) {
+  }
+}
