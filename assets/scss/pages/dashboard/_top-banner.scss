@@ -1,17 +1,18 @@
 .dashboard_top-banner_box {
-  .card-box { border-radius: 8px; }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 34px;
+    .baner-wrapper { min-height: 178px; }
+  }
 }
 .top-banner_greatings {
   height: 100%;
   padding: 24px 24px 24px 450px;
   background: $white;
   color: $text-color_primary;
+  align-content: space-between;
   h2 {
     font-size: 20px;
     margin-bottom: 6px;
-  }
-  .user_box {
-    margin-bottom: 36px;
   }
   .user_name {
     display: block;

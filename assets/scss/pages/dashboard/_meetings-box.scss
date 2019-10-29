@@ -1,0 +1,109 @@
+.dashboard_meetings_box {
+  .title {
+    color: $text-color_primary;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .local-title {
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+.dashboard_scheduler_dates-selector {
+  border-bottom: 1px solid $border-color_primary;
+  padding: 10px 75px;
+  position: relative;
+  .dates_range {
+    li {
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.dashboard_scheduler_year-selector {
+  padding: 8px 0;
+  .current-year { color: $text-color_primary; }
+  .btns-holder {
+    position: relative;
+    flex: 0 0 75px;
+    min-width: 75px;
+  }
+}
+
+.dashboard_scheduler_box {
+  height: 660px;
+  width: 100%;
+}
+
+.dashboard_calendar_box {
+  margin: 16px 0 34px;
+  height: 250px;
+}
+
+.dashboard_calendar_legend {
+  margin-bottom: 38px;
+  ul {
+    color: $text-color_primary;
+    font-size: 14px;
+    line-height: 1;
+  }
+  li {
+    padding-left: 24px;
+    margin-bottom: 8px;
+    position: relative;
+    &:before {
+      content: '';
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 15px;
+      width: 15px;
+    }
+    &:nth-child(1) {
+      &:before { background: $primary-color; }
+    }
+    &:nth-child(2) {
+      &:before { 
+        background: #def0fd;
+        border: 1px solid #59B9FF;
+       }
+    }
+    &:nth-child(3) {
+      &:before { background: #E1E7EA; }
+    }
+    &:nth-child(4) {
+      &:before { 
+        background: #e5e5e5;
+        border: 1px solid #70868f;
+       }
+    }
+  }
+}
+
+.dashboard_calendar_patients-list {
+  table {
+    font-size: 14px;
+    color: $text-color_primary;
+    td + td {
+      color: #828282;
+      text-align: right;
+    }
+  }
+  .user-icon {
+    fill: $text-color_primary;
+    margin-right: 6px;
+    height: 10px;
+    width: 10px;
+  }
+}
+
+
+.dump-block { background: $light-grey; }

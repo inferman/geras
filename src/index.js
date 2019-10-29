@@ -17,6 +17,7 @@ import "./../assets/img/icons/clock-icon.svg";
 import "./../assets/img/icons/play-icon.svg";
 import "./../assets/img/icons/heart-icon.svg";
 import "./../assets/img/icons/calendar-colored-icon.svg";
+import "./../assets/img/icons/arrow-left-icon.svg";
 
 import "./../assets/js/sidebarToggle";
 import "./../assets/js/selector";
