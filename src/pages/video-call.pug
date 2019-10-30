@@ -37,3 +37,12 @@ block content
           li Add recommendation
           li.active Text chat
         textarea(rows="8").chat_messages-list
+        .chat_message-box
+          label Write your message here
+          .inner-holder
+            textarea(rows="2").chat_messages-list.no-borders
+            .btns-holder.flex.align-center
+              button(type="button").attachment-btn
+                +svgIcon('clip-icon', 'attachment')
+              button(type="button").send-btn Send
+

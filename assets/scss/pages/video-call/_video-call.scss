@@ -31,4 +31,54 @@
       &:not(:last-child) { margin-right: 32px; }
     }
   }
+  .chat_messages-list {
+    &.no-borders{
+      border: none;
+    }
+  }
+}
+
+.chat_message-box {
+  margin-top: 10px;
+  label {
+    display: block;
+    color: $text-color_primary;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .inner-holder {
+    border: 1px solid $inputs-border-color;
+    border-radius: 2px;
+    position: relative;
+  }
+  .chat_messages-list {
+    padding-right: 145px;
+  }
+  .btns-holder {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .send-btn {
+    background: $primary-color;
+    border-radius: 32px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 7px 20px;
+  }
+  .attachment-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $bg-color_primary;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+    .attachment {
+      height: 17px;
+    }
+  }
 }
