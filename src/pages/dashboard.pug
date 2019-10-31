@@ -1,7 +1,11 @@
 extends ./../layouts/main
 
+block pageTitle
+  .page-title.hidden-xl-up
+    +burger('sidebar_toggler-box hidden-xl-up')
+    h1 Dashboard
 block content 
-  - const dataTable = ["Nikki Johnsson", "Elma Wilson", "Martin Gibbs", "Jerome Russo", "Dottie Kim", "Hubert Duarte"];
+  -const dataTable = ["Nikki Johnsson", "Elma Wilson", "Martin Gibbs", "Jerome Russo", "Dottie Kim", "Hubert Duarte"];
 
   section.dashboard_top-banner_box
     // TOP BANNER BLOCK

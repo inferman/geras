@@ -21,21 +21,21 @@ block content
   include ./../partitials/diagnostic/cognitive-chart-item
  
   .diagnostic_content-wrapper.flex-container
-    //- SIDEBAR COLUMN
+    // SIDEBAR COLUMN
     .flex-item.item-md-3
-      //- USER PERSONAL INFO CARD
+      // USER PERSONAL INFO CARD
       .diagnostic_card.card-box.no-borders.shadow
         include ./../partitials/diagnostic/personal-info.pug
 
-      //- COMMENTS BLOCK
+      // COMMENTS BLOCK
       .diagnostic_card.card-box.card-box--comments.no-borders.shadow.card_comment
         include ./../partitials/diagnostic/comments.pug
 
-      //- EDIT HISTORY BLOCK
+      // EDIT HISTORY BLOCK
       .diagnostic_card.card-box--history.card-box.no-borders.shadow.card_comment
         include ./../partitials/diagnostic/edit-history.pug
 
-    //- CONTENT COLUMN
+    // CONTENT COLUMN
     .flex-item.item-md-9
       .flex-container.hide
         include ./../partitials/diagnostic/tabs-content/diagnosic-history-content
