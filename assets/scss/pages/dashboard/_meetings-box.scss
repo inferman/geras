@@ -14,7 +14,7 @@
 
 .dashboard_scheduler_dates-selector {
   border-bottom: 1px solid $border-color_primary;
-  padding: 10px 75px;
+  padding: 10px 16px;
   position: relative;
   .dates_range {
     li {
@@ -37,8 +37,7 @@
 }
 
 .dashboard_scheduler_box {
-  height: 660px;
-  width: 100%;
+
 }
 
 .dashboard_calendar_box {
