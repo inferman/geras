@@ -14,6 +14,7 @@
 @import "./partitials/card-box/card-box";
 @import "./partitials/tabs/main-tabs";
 @import "./partitials/tabs/sub-tabs";
+@import "./partitials/schedule-table/schedule-table";
 
 //------- Pages -------//
 // Patients
@@ -33,3 +34,7 @@
 
 // Video call
 @import "./pages/video-call/video-call";
+
+// Appointments
+@import "./pages/appointments/appointments";
+

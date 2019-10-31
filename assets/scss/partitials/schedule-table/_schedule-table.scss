@@ -1,0 +1,46 @@
+$row-height: 50px;
+$bd-width: 1px;
+
+.scheduller_table-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  max-height: 500px;
+  overflow-y: auto;
+  .days-list {
+    display: flex;
+    flex-direction: column;
+    > li {
+      flex: 0 0 $row-height+$bd-width;
+      display: flex;
+      align-items: center;
+      font-size: 10px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.scheduller-table {
+  tr {
+    border-bottom: $bd-width solid rgba($black, 0.05);
+    height: $row-height;
+  }
+  td {
+    padding: 0 16px;
+  }
+  .cell-wrapper {
+    height: $row-height;
+    padding: 4px;
+    &.active { background: rgba(89, 185, 255, 0.1); }
+  }
+  .scheduller_card {
+    background: $primary-color;
+    border-radius: 4px;
+    color: $white;
+    padding: 6px;
+    > div {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+  }
+}

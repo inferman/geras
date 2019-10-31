@@ -1,0 +1,36 @@
+extend ./../layouts/main
+
+block pageTitle
+  .page-title
+    +burger('sidebar_toggler-box hidden-xl-up')
+    h1 Appointments
+
+block content
+  .scheduller_table-wrapper
+    ul.days-list
+      -for(let i=0; i<=23;i++) 
+        li=`${i>12 ? (i-12+' PM') : (i+' AM')}` 
+      
+    table.scheduller-table
+      tbody
+          -for(let i=0; i<=23;i++)
+            tr
+              td
+                .cell-wrapper(class=`${(i !== 4) && 'active'}`)
+                  -if (i===1 || i===2 || i===6)
+                    .scheduller_card
+                      .user-name John Sv... 
+                      .time 5:00 - 6:00
+              td
+                .cell-wrapper(class=`${(i !== 6 && i !== 7) && 'active'}`)
+                  -if (i===5 || i===8)
+                    .scheduller_card
+                      .user-name John Sv... 
+                      .time 5:00 - 6:00
+              td
+                .cell-wrapper.active
+                  -if (i===7 || i===8 || i===9)
+                    .scheduller_card
+                      .user-name John Sv... 
+                      .time 5:00 - 6:00
+            
