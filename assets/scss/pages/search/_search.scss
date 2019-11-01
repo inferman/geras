@@ -7,6 +7,9 @@
   margin-bottom: 20px;
 }
 .search_table-box {
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+  padding-right: 1px;
   @media screen and (min-width: 1200px) {
     max-width: 1000px;
   }

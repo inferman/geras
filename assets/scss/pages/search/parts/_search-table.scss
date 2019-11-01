@@ -5,7 +5,6 @@ $cellsToHide: (2, 6, 7, 8, 9, 11);
   // overflow: hidden;
   thead {
     tr {
-      background: #546e7a;
       color: #fff;
       font-size: 10px;
       font-weight: 600;
@@ -13,7 +12,12 @@ $cellsToHide: (2, 6, 7, 8, 9, 11);
       text-transform: uppercase;
     }
     th {
+      background: #546e7a;
       text-align: left;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 2;
       @media screen and (max-width: 767px) {
         @each $cell in $cellsToHide {
           &:nth-child(#{$cell}) {
