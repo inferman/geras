@@ -1,0 +1,38 @@
+.calendar_legend-list {
+  color: $text-color_primary;
+  font-size: 14px;
+  line-height: 1;
+  li {
+    padding-left: 24px;
+    margin-bottom: 8px;
+    position: relative;
+    &:before {
+      content: '';
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 15px;
+      width: 15px;
+    }
+    &:nth-child(1) {
+      &:before { background: $primary-color; }
+    }
+    &:nth-child(2) {
+      &:before { 
+        background: #def0fd;
+        border: 1px solid #59B9FF;
+      }
+    }
+    &:nth-child(3) {
+      &:before { background: #E1E7EA; }
+    }
+    &:nth-child(4) {
+      &:before { 
+        background: #e5e5e5;
+        border: 1px solid #70868f;
+      }
+    }
+  }
+}

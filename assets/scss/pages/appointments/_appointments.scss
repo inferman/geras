@@ -1,0 +1,76 @@
+// APPOINMTMENTS LAYOUT AND GENERAL STYLES  
+.appointments_scheduler_section {
+  .local-title {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+}
+// APPOINMTMENTS LAYOUT AND GENERAL STYLES  
+// APPOINTMENTS METTINGS REMINDER START  
+.meetings-reminder_box {
+  font-weight: 600;
+  margin-bottom: 20px;
+  .icon-holder {
+    background: #F1F5FE;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+  }
+  .calendar-icon {
+    height: 22px;
+    width: 22px;
+  }
+  .user-icon {
+    fill: $text-color_primary;
+    margin-right: 8px;
+    height: 12px;
+    width: 12px;
+  }
+  .user-name_box {
+    color: $text-color_primary;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  & + .btn-holder {
+    margin-top: 42px;
+    button { width: 100%; }
+  }
+}
+.meetings-reminder_spoiler {
+  color: $dark-blue;
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+.metting-reminder_timer {
+  font-size: 18px;
+}
+
+// APPOINTMENTS METTINGS REMINDER END  
+// APPOINTMENTS CALENDAR START  
+.appointments_year-selector {
+  .btns-holder {
+    flex: 0 0 50px;
+    max-width: 50px;
+  }
+}
+
+.appointments_calendar_box {
+  height: 194px;
+  width: 100%;
+  margin: 12px auto 26px;
+}
+
+.appointments_scheduled-time {
+  margin-bottom: 20px;
+  .meetings-list {
+    font-size: 14px;
+    display: flex;    
+    &:not(:last-child) { margin-bottom: 6px; }
+    dt {
+      font-weight: 600;
+      margin-right: 12px;
+    }
+  }
+}
+// APPOINTMENTS CALENDAR END  

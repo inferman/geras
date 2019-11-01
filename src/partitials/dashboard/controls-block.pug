@@ -1,0 +1,14 @@
+.flex-container
+  // DAYS SWITCHER
+  .flex-item.item-md-8
+    .dashboard_scheduler_dates-selector
+      button(type="button").arrow-switcher-btn.arrow--left
+        +svgIcon('arrow-left-icon', 'arrow-icon')
+      button(type="button").arrow-switcher-btn.arrow--right
+        +svgIcon('arrow-left-icon', 'arrow-icon right')
+      +dates-range(["wed 15", "thu 16", "fri 17"])
+             
+  // YEARS SWITCHER
+  .flex-item.item-md-4
+    .dashboard_scheduler_year-selector
+      include ./../calendar/calendar-ctrls

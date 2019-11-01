@@ -1,0 +1,15 @@
+.meetings-reminder_box.flex.align-center
+  .flex-item--stretch
+    h3.meetings-reminder_spoiler.t_uppercase next meeting in
+    .metting-reminder_timer 00 : 00 : 12 : 45 
+  .flex-item--shrink
+    .icon-holder.flex.align-center.justify-center
+      +svgIcon('calendar-colored-icon', 'calendar-icon')
+.meetings-reminder_box
+  h3.meetings-reminder_spoiler.t_uppercase next meeting with
+  .user-name_box.flex.align-center
+    +svgIcon('user-icon', 'user-icon')
+    a(href="#").user-link John Svensson
+.btn-holder
+  button(type="button").g_btn.g_btn--outlined.t_uppercase
+    | go to video call 

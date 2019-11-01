@@ -6,6 +6,7 @@ block pageTitle
     h1 Dashboard
 block content 
   -const dataTable = ["Nikki Johnsson", "Elma Wilson", "Martin Gibbs", "Jerome Russo", "Dottie Kim", "Hubert Duarte"];
+  include ./../partitials/calendar/dates-range-mixin
 
   section.dashboard_top-banner_box
     // TOP BANNER BLOCK
@@ -17,7 +18,7 @@ block content
       .flex-container
         // CONTROLS
         .flex-item
-          include ./../partitials/dashboard/calendar-ctrls
+          include ./../partitials/dashboard/controls-block
           
         // SCHEDULER BLOCK
         .flex-item.item-md-8
@@ -30,11 +31,8 @@ block content
           // LEGEND
           .dashboard_calendar_legend
             h3.local-title.t_uppercase calendar
-            ul
-              li Booked meetings
-              li Available times
-              li Past meetings
-              li Past available times
+            include ./../partitials/calendar/calendar-legend
+            
           // PATIENTS
           .dashboard_calendar_patients-list
             h3.local-title.t_uppercase Latest patients

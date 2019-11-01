@@ -7,28 +7,31 @@ block pageTitle
 
 block content
   .flex-container
-    .flex-item.item-md-3
-      .appointments_meetings-reminder.card-box.no-borders        
-        .meetings-reminder_box
+    // CALENDAR AND SCHEDULLED MEETINGS
+    section.appointments_scheduler_section.flex-item.item-md-3
+      // MEETINGS REMINDER
+      .card-box.no-borders
+        include ./../partitials/appointments/appointments-meetings-block
 
-      .appointments_calendar.card-box.no-borders
-        .calendar_box
-          .dashboard_scheduler_year-selector.flex.align-center.justify-between
-            .current-year.flex-item--shrink
-              | October 2019
-            .btns-holder
-              button(type="button").arrow-switcher-btn.arrow--left
-                +svgIcon('arrow-left-icon', 'arrow-icon')
-              button(type="button").arrow-switcher-btn.arrow--right
-                +svgIcon('arrow-left-icon', 'arrow-icon right')
-          .dashboard_calendar_box.dump-block
-          .dashboard_calendar_legend
-            h3.local-title.t_uppercase calendar
-            ul
-              li Booked meetings
-              li Available times
-              li Past meetings
-              li Past available times
+      // CALENDAR WITH LEGEND
+      .card-box.no-borders
+        .appointments_year-selector
+          include ./../partitials/calendar/calendar-ctrls
           
-    .flex-item.item-md-9
+        .appointments_calendar_box.dump-block
+
+        .appointments_scheduled-time
+          h3.local-title.t_uppercase today
+          dl.meetings-list
+            dt 12
+            dd Meetings
+          dl.meetings-list
+            dt 25
+            dd Available times
+        
+        .appointments_calendar_legend
+          h3.local-title.t_uppercase calendar
+          include ./../partitials/calendar/calendar-legend
+          
+    section.flex-item.item-md-9
       .card-box.no-borders
