@@ -74,3 +74,30 @@
   }
 }
 // APPOINTMENTS CALENDAR END  
+
+
+// APPOINTMENTS SCHEDULER START
+.appointments_scheduler-calendar_box {
+  .calendar_ctrls-block {
+    border-bottom: 1px solid $border-color_primary;
+    padding-bottom: 16px;
+    margin-bottom: 10px;
+    > div:first-child { margin-right: 20px; }
+    .btns-holder {
+      width: 50px;
+    }
+  }
+}
+.appointments_scheduler-calendar {
+  .dates_range {
+    margin: 0 16px 10px 30px
+  }
+  .scheduller_table-wrapper {
+    max-height: calc(100vh - 250px);
+  }
+  .scheduller-table td {
+    padding: 0 6px;
+  }
+}
+// APPOINTMENTS SCHEDULER END
+

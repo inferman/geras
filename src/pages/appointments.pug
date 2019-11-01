@@ -6,6 +6,7 @@ block pageTitle
     h1 Appointments
 
 block content
+  include ./../partitials/calendar/dates-range-mixin
   .flex-container
     // CALENDAR AND SCHEDULLED MEETINGS
     section.appointments_scheduler_section.flex-item.item-md-3
@@ -34,4 +35,11 @@ block content
           include ./../partitials/calendar/calendar-legend
           
     section.flex-item.item-md-9
-      .card-box.no-borders
+      .appointments_scheduler-calendar_box.card-box.no-borders
+        .calendar_ctrls-block.flex.align-center
+          .flex-item--stretch
+            include ./../partitials/calendar/calendar-ctrls
+          .flex-item--shrink
+            +selector(1, ["Day", "Week", "Month"])
+
+        include ./../partitials/appointments/appointments-scheduler-calendar
