@@ -5,6 +5,7 @@
     "tiles": [
       {
         "blockTitle": {},
+        "blockType": "complex",
         "answersData": [
           {"key": "Expect", "val": ["They are vegetables"]},
           {"key": "Anwer", "val": ["They are fruits"]},
@@ -21,6 +22,7 @@
     "tiles": [
       {
         "blockTitles": {},
+        "blockType": "complex",
         "answersData": [
           {"key": "Expect", "val": ["They are vegetables"]},
           {"key": "Anwer", "val": ["They are fruits"]},
@@ -36,7 +38,7 @@
   .card-box.diagnostic_test-box
     .diagnostic_test_summary
       +test-summary-mixin({"title": "Survey", "date": "26/07/2018 11:42", "status": "Completed", "risk": "12%"})
-    .diagnostic_test_body            
+    .diagnostic_test_body
       +question-mixin(data1)
     
 .flex-item.item-sm-12
@@ -59,7 +61,7 @@
     .diagnostic_test_body
       section.cognitive-test_section
         include ./../cognitive-summary-results
-      section.cognitive-test_section              
+      section.cognitive-test_section
         include ./../cognitive-charts.pug
       section.cognitive-test_section
         include ./../cognitive-exercises

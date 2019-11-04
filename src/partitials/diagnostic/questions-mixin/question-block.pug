@@ -1,32 +1,32 @@
 mixin question-block(tile, index, tilesCounter)
   .spoiler_body
     .diagnostic_question_body
+      if tile.blockType === "complex"
+        // Test title
+        .block-title.flex.justify-between.align-center
+          .flex-item--shrink
+            h4 attempt #{index+1} of #{tilesCounter}
+          .flex-item--shrink
+            h4 points #[strong 1]
 
-      // Test title
-      .block-title.flex.justify-between.align-center
-        .flex-item--shrink
-          h4 attempt #{index+1} of #{tilesCounter}
-        .flex-item--shrink
-          h4 points #[strong 1]
+        // Questions and answers
+        .flex
+          .inner-wrapper.inner-wrapper--answers.flex-item--stretch
+            article.diagnostic_question_details.flex.flex--wrap
+              each answer in tile.answersData
+                dl.answer-item
+                  dt #{answer.key}
+                  each val in answer.val
+                    dd #{val}
+          .inner-wrapper.inner-wrapper--actions
+            button(type="button").g_btn.g_btn--primary Edit
 
-      // Questions and answers      
-      .flex
-        .inner-wrapper.inner-wrapper--answers.flex-item--stretch
-          article.diagnostic_question_details.flex.flex--wrap
-            each answer in tile.answersData
-              dl.answer-item
-                dt #{answer.key}
-                each val in answer.val
-                  dd #{val}
-        .inner-wrapper.inner-wrapper--actions
-          button(type="button").g_btn.g_btn--primary Edit
-
-      // Test Picture block
-      if(tile.testPicture && tile.testPicture.image)
-        .block-picture
-          .pic-holder
-            img(src="#{tile.testPicture.image}")
-          .btn-holder
-            button(type="button").g_btn.play-btn
-              +svgIcon('play-icon', 'play-icon')
-              | Play drawing process
+        // Test Picture block
+        if(tile.testPicture && tile.testPicture.image)
+          .block-picture
+            .pic-holder
+              img(src="#{tile.testPicture.image}")
+            .btn-holder
+              button(type="button").g_btn.play-btn
+                +svgIcon('play-icon', 'play-icon')
+                | Play drawing process
