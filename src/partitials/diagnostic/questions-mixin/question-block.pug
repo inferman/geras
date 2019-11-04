@@ -30,3 +30,7 @@ mixin question-block(tile, index, tilesCounter)
               button(type="button").g_btn.play-btn
                 +svgIcon('play-icon', 'play-icon')
                 | Play drawing process
+      else if tile.blockType === "simple"
+        h3.simple-question=tile.answersData[0].key
+        span.simple-text Answer
+        p.simple-answer=tile.answersData[0].val

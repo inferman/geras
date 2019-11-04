@@ -65,6 +65,18 @@ $answer-min-width: 120px;
       margin-right: 5px;
     }
   }
+  .simple-question{
+    margin-bottom: 24px;
+  }
+  .simple-text {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .simple-answer {
+    font-size: 14px;
+    margin: 0;
+  }
 }
 
 .diagnostic_question_details {
