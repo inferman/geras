@@ -1,0 +1,17 @@
+extend ./../layouts/login 
+
+block content
+  .login_wrapper
+    h1.login_title Welcome to Geras Solutions web portal<br>for health care professionals
+    .login_card-box
+      h3 Login
+      .login_from-wrapper
+        .input-holder
+          label Email
+          input(type="text")
+        .input-holder
+          label Password
+          input(type="text")
+        .btns-holder.flex.justify-between.align-center
+          button(type="submit").g_btn.g_btn--primary Login
+          a(href="#") Forget your password?

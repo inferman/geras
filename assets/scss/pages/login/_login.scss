@@ -1,0 +1,17 @@
+.login_wrapper {
+  margin-top: -100px;
+}
+.login_title {
+  padding: 50px 0;
+  text-align: center;
+}
+.login_card-box {
+  // position: absolute;
+  left: 50%;
+  top: 50%;
+  // transform: translate(-50%, -50%);
+  background: $white;
+  border-top: 3px solid $primary-color;
+  padding: 16px;
+}
+
